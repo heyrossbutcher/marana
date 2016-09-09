@@ -1,0 +1,367 @@
+// _mq.scss
+@media screen and (min-width: 1400px) {
+	h1 {
+	    // margin: 0;
+	    padding: 23% 22.5% 25% 22.5%;
+	    // font-size: 2em;
+	}
+	//
+	ul.menu {
+	  font-size: 1.1vw;
+	  margin: 0 22.5%;
+	}
+
+  .sub-menu{
+    font-size: .7vw;
+  }
+
+  header .nav-wrapper .consultation p {
+      font-size: .75vw;
+      margin: 0 20%;
+  }
+	//
+	header .nav-wrapper .socialBtns ul li a {
+	    font-size: 1.25vw;
+	}
+	//
+	.contact .locations .topRow p {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1.25rem;
+	}
+	//
+	.homeGallery .full_width_image{
+		height: 50vh;
+		.innerKey {
+		    transform: scale(1.45);
+		}
+	}
+	.homeGallery .two_column_copy, .homeGallery .image_with_margin, .homeGallery .image_and_copy, .homeGallery .copy_and_image {
+	  width: 60%;
+	  margin: 0 20% 100px;
+	}
+	.homeGallery .showcaseTitle{
+		width: 60%;
+		margin: 0 20% 40px;
+	}
+	.homeGallery .full_width_image {
+	    margin-bottom: 100px;
+	}
+	////////////////
+	.portfolio .port_home .port_home_name h3 {
+	    font-size: 2rem;
+	}
+	.process .process_block .process_collect .process_copy_right, .process .process_block .process_collect .process_copy_left {
+	    // width: 100%;
+		width: 45%;
+	    margin: 100px 7.5%;
+	    h3 {
+	        font-size: 4rem;
+	    }
+	    p{
+	    font-size: 1.3rem; 
+	    }
+	}
+	.process .process_block .process_key {
+	    height: 50vh;
+	    .innerKey {
+	        transform: scale(1.6);
+	    }
+	}
+	////////////////
+	.about .full_width_image {
+	    height: 50vh;
+	}
+	.about .image_with_copy_overtop .copyBlock .aboutTitle2 {
+	    font-size: 4rem;
+	}
+	.about .aboutTitle {
+	    width: 60%;
+	    margin: 100px 20% 40px;
+	}
+	.about .two_column_copy {
+	    width: 60%;
+	    margin: 0 20% 100px;
+	    p{
+	    	font-size: 1.5rem;
+	    }
+	}
+	.about .image_with_copy_overtop{
+	    height: 50vh;
+		.copyBlock {
+		    width: 20vw;
+	        margin: 0 0 0 20%;
+		    p{
+		    	font-size: 1.5rem;
+		    }
+		}
+	}
+	.about .copy_and_image {
+	    margin: 50px 0 100px 20%;
+	    .copy{
+	        margin: 100px 0;
+	    	width: 40%;
+	    	p{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+
+	    .image{
+	    	width: 55%;
+	    	margin-left: 15%;
+	    }
+	}
+	.about .image_and_copy {
+	    .copy{
+	        margin: 100px 0 0;
+	    	width: 30%;
+	    	p{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+	    .image{
+	    	margin-right: 10%;
+	    }
+	}
+	////////////////
+	.consultationFooter .consultation p {
+	    font-size: 1.3vw;
+	    padding: 7.5px 37.5px;
+	    cursor: pointer;
+	    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
+	}
+	////////////////
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media screen and (min-width: 1600px) {
+	h1 {
+	    // margin: 0;
+	    padding: 23% 22.5% 25% 22.5%;
+	    // font-size: 2em;
+	}
+	//
+	ul.menu {
+	  font-size: 1.1vw;
+	  margin: 0 22.5%;
+	}
+
+  .sub-menu{
+    font-size: .7vw;
+  }
+
+  header .nav-wrapper .consultation p {
+      font-size: .75vw;
+      margin: 0 20%;
+  }
+	//
+	header .nav-wrapper .socialBtns ul li a {
+	    font-size: 1.25vw;
+	}
+	//
+	.contact .locations .topRow p {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1.25rem;
+	}
+	//
+	.homeGallery .full_width_image{
+		height: 50vh;
+		.innerKey {
+		    transform: scale(1.45);
+		}
+	}
+	.homeGallery .two_column_copy, .homeGallery .image_with_margin, .homeGallery .image_and_copy, .homeGallery .copy_and_image {
+	  width: 60%;
+	  margin: 0 20% 100px;
+	}
+	.homeGallery .showcaseTitle{
+		width: 60%;
+		margin: 0 20% 40px;
+	}
+	.homeGallery .full_width_image {
+	    margin-bottom: 100px;
+	}
+	////////////////
+	.portfolio .port_home .port_home_name h3 {
+	    font-size: 2rem;
+	}
+	.process .process_block .process_collect .process_copy_right, .process .process_block .process_collect .process_copy_left {
+	    // width: 100%;
+		width: 45%;
+	    margin: 100px 7.5%;
+	    h3 {
+	        font-size: 4rem;
+	    }
+	    p{
+	    font-size: 1.3rem; 
+	    }
+	}
+	.process .process_block .process_key {
+	    height: 50vh;
+	    .innerKey {
+	        transform: scale(1.6);
+	    }
+	}
+	////////////////
+	.about .full_width_image {
+	    height: 50vh;
+	}
+	.about .image_with_copy_overtop .copyBlock .aboutTitle2 {
+	    font-size: 4rem;
+	}
+	.about .aboutTitle {
+	    width: 60%;
+	    margin: 100px 20% 40px;
+	}
+	.about .two_column_copy {
+	    width: 60%;
+	    margin: 0 20% 100px;
+	    p{
+	    	font-size: 1.5rem;
+	    }
+	}
+	.about .image_with_copy_overtop{
+	    height: 50vh;
+		.copyBlock {
+		    width: 20vw;
+	        margin: 0 0 0 20%;
+		    p{
+		    	font-size: 1.5rem;
+		    }
+		}
+	}
+	.about .copy_and_image {
+	    margin: 50px 0 100px 20%;
+	    .copy{
+	        margin: 100px 0;
+	    	width: 40%;
+	    	p{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+
+	    .image{
+	    	width: 55%;
+	    	margin-left: 15%;
+	    }
+	}
+	.about .image_and_copy {
+	    .copy{
+	        margin: 100px 0 0;
+	    	width: 30%;
+	    	p{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+	    .image{
+	    	margin-right: 10%;
+	    }
+	}
+	////////////////
+	.consultationFooter .consultation p {
+	    font-size: 1.3vw;
+	    padding: 7.5px 37.5px;
+	    cursor: pointer;
+	    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
+	}
+	////////////////
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media screen and (max-width: 1200px) {
+	//CONTACT
+	.line01{
+		display: block;
+	}
+	.contact .locations .topRow .contactInfo {
+	    bottom: 10px;
+	    p{
+		    font-size: 1.2rem;
+	    }
+	}
+
+	//ABOUT
+	.about .image_with_copy_overtop .copyBlock {
+	    width: 25vw;
+	}
+	.about .image_with_copy_overtop {
+	    height: 50vh;
+	}
+		
+
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media screen and (max-width: 1024px) {
+
+	.process .process_block .process_collect .process_copy {
+	    padding: 100px 0;
+	}
+	.process .process_block .process_key {
+	    height: 45vh;
+	}
+	.process .process_block .process_collect .process_copy {
+	    width: 40%;
+	}
+	.homeGallery {
+	    font-size: 1.2rem;
+	}
+	.homeGallery .full_width_image {
+	    height: 45vh;
+	}
+	ul.menu {
+	    font-size: 1.6vw;
+	}
+	.sub-menu {
+	    font-size: 1.1vw;
+	}
+	header .nav-wrapper {
+	    min-height: 500px;
+	}
+	.contact .contactForm {
+	    width: 30%;
+	    padding: 25px 3% 0;
+	}
+	.contact .locations .mapRow {
+	    height: 70vh;
+	}
+	header .nav-wrapper .consultation p {
+	    font-size: 1.25vw;
+	}
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media screen and (max-width: 900px) {
+
+	.portfolio .port_home {
+	    width: 49%;
+	}
+	.contact .locations .topRow .title::before {
+	    left: 8px;
+	    content: "";
+	}
+	.contact .locations .topRow .tabTwo {
+	    padding: 12px 12px 12px 20px;
+	    width: 33%;
+	    left: 33.5%;
+	}
+	.contact .locations .topRow .tabOne {
+	    padding: 12px 12px 12px 20px;
+	    width: 33%;
+
+	}
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media screen and (max-width: 850px) {
+	.contact .locations .mapRow {
+	    height: 60vh;
+	}
+
+}
