@@ -89,21 +89,35 @@ app.imageLoader = function(target){
 ///
 ///
 app.mapReveal = function(){
+	$('.contactTab').on('click', function(){
+		$('.contactFormSpace').removeClass('display-hide');
+		$('.map01').addClass('display-hide');
+		$('.map02').addClass('display-hide');
+		//
+		$('.contactTab').removeClass('map-tab-opacity');
+		$('.tabOne').addClass('map-tab-opacity');
+		$('.tabTwo').addClass('map-tab-opacity');
+		//
+	});
 	$('.tabOne').on('click', function(){
 		$('.map01').removeClass('display-hide');
 		$('.map02').addClass('display-hide');
+		$('.contactFormSpace').addClass('display-hide');
 		//
 		$('.tabOne').removeClass('map-tab-opacity');
 		$('.tabTwo').addClass('map-tab-opacity');
+		$('.contactTab').addClass('map-tab-opacity');
 		//
 		initMap(latLng1,map1,location1);
 	});
 	$('.tabTwo').on('click', function(){
 		$('.map02').removeClass('display-hide');
 		$('.map01').addClass('display-hide');
+		$('.contactFormSpace').addClass('display-hide');
 		//
 		$('.tabTwo').removeClass('map-tab-opacity');
 		$('.tabOne').addClass('map-tab-opacity');
+		$('.contactTab').addClass('map-tab-opacity');
 		//
 		initMap(latLng2,map2,location2);
 	});
@@ -423,11 +437,29 @@ var contactPage = $('.container').hasClass('contact');
 var contactPage = $('.container').hasClass('contact');
 ///////////
 //
+//////////////
+//
+app.setContactTabHeight = function(){
+	
+		t1Height = $('.tabOne').innerHeight();
+		console.log(t1Height)
+		$('.contactTab').css({ height: t1Height });
+	//
+}
+//
+app.contactImage = function(){
+	$('.innerContactImage').css('background-image','url(http://localhost:8888/078-Marana/Production/wp-content/themes/heyross/img/showcase-01-full1.jpg)');
+};
+//
 $(function(){
 	//
 	if( contactPage ){
 		app.mapReveal();
 		console.log('Contact page');
+		setTimeout(function(){
+			app.setContactTabHeight();
+		}, 100);
+		app.contactImage();
 	}
 	//
 	if( homePage ){
@@ -444,6 +476,10 @@ $(function(){
 	app.hideOverlay();
 	//
 	app.moveBg();
+	//
 });
 //
+$(window).on('resize', function(){
+	app.setContactTabHeight();
+});
 

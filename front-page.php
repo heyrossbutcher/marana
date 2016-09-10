@@ -17,6 +17,7 @@ get_header();  ?>
         <?php // Start the loop ?>
 
         <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
+            
 
             <?php $home_showcase = get_field('showcase');  ?>
             <?php $home_order = get_field('home_page_order');  ?>
@@ -26,7 +27,7 @@ get_header();  ?>
             <?php $page_title = get_the_title($id); ?>
             <!--  -->
             <?php
-                if ( $home_order == 'one' )  {
+                if ( $home_showcase == 1 && $home_order == 'one' )  {
                     // pre_r($link); 
                    // 
                     echo '<div class="col1">';
@@ -37,6 +38,7 @@ get_header();  ?>
                     echo '<ul class="slides">';
                     $oneCounter = 0;
                     foreach ($homes_info as $home_info) {
+
                         $whatImage = $home_info['select_a_type_of_row'];
                        //
                         if( $whatImage != 'two_column_copy' ){
@@ -115,7 +117,7 @@ get_header();  ?>
                 <?php $page_title = get_the_title($id); ?>
                 <!--  -->
                 <?php
-                    if ( $home_order == 'two' )  {
+                    if ( $home_showcase == 1 && $home_order == 'two' )  {
                        // 
                         echo '<a href="'.$link.'">';
                         echo '<div class="showcase02 showcase flexslider-showcase2 panelBtn invisible">';
@@ -205,7 +207,7 @@ get_header();  ?>
                 <?php $page_title = get_the_title($id); ?>
                 <!--  -->
                 <?php
-                    if ( $home_order == 'three' )  {
+                    if ( $home_showcase == 1 && $home_order == 'three' )  {
                        // 
                         echo '<a href="'.$link.'">';
                         echo '<div class="showcase03 showcase flexslider-showcase3 panelBtn invisible">';

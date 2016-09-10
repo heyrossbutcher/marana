@@ -7,6 +7,12 @@
 </div> <!-- /.wrapper -->
 <div class="overlay">
   <!--  -->
+    <div class="closeOverlayButton">
+      <div class="close">
+        <img src="<?php bloginfo( 'url' ); ?>/wp-content/themes/heyross/img/x.svg"/>
+      </div>
+    </div>
+  <!--  -->
   <div class="consultationForm">
      <!--  -->
       <?php query_posts('pagename=consultation'); ?>
@@ -15,11 +21,7 @@
         <?php wp_reset_postdata(); ?>
         <?php endwhile; ?>
 
-      <div class="closeOverlayButton">
-        <div class="close">
-          <img src="<?php bloginfo( 'url' ); ?>/wp-content/themes/heyross/img/x.svg"/>
-        </div>
-      </div>
+      
 
    </div>
   <!--  -->
@@ -30,11 +32,6 @@
   <!--  -->
   <div class="imageSlider">
     
-      <div class="closeOverlayButton">
-        <div class="close">
-          <img src="<?php bloginfo( 'url' ); ?>/wp-content/themes/heyross/img/x.svg"/>
-        </div>
-      </div>
   </div>
   <!--  -->
 <script>
