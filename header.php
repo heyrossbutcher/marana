@@ -19,15 +19,18 @@
 <body <?php body_class(); ?>
 
 <div class="wrapper clearfix">
-<header>
-  <div class="nav-wrapper">
+
+<header class="clearfix">
+  <div class="nav-wrapper clearfix">
+
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <img src="<?php bloginfo( 'url' ); ?>/wp-content/themes/heyross/img/maranaLogo.svg">
       </a>
     </h1>
+    
 
-    <?php if( is_front_page() || is_page('process') || is_page('about') || is_page('contact')  ): ?>
+    <?php if( is_front_page() || is_page('process') || is_page('about') || is_page('contact') || is_page('stories')  ): ?>
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'
@@ -59,9 +62,61 @@
     </div>
     </div>
   </div>
+  <!--  -->
+  <div class="nav-wrapper-mobile clearfix">
 
-</header><!--/.header-->
+      <h1>
+        <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+          <img src="<?php bloginfo( 'url' ); ?>/wp-content/themes/heyross/img/maranaLogo.svg">
+        </a>
+      </h1>
+      <div class="hamMenu">
+        <div class="nav">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      </div>
+      <!--  -->
+  </div>
+  <!--  -->
+  <div class="nav-container-mobile">
+    <?php wp_nav_menu( array(
+      'container' => false,
+      'theme_location' => 'primary'
+    )); ?>
+  <!--  -->
+  <div class="nav-container-mobile-bottom">
+    <div class="icon">
+      <ul>
+        <li>
+          <a href="tel:4162593445"><i class="fa fa-phone" aria-hidden="true"></a></i>
+        </li>
+        <li>
+          <a href="<?php bloginfo( 'url' ); ?>/contact/"><i class="fa fa-envelope-o" aria-hidden="true"></a></i>
+        </li>
+        <li>
+          <a href="<?php bloginfo( 'url' ); ?>/maps-mobile"><i class="fa fa-map-marker" aria-hidden="true"></i></a></i>
+        </li>
+      </ul>
+    </div>
+    <div class="consult"><p>Book a consultation</p></div>
+    <div class="social">
+      <ul>
+        <li>
+          <a href=""><i class="fa fa-facebook" aria-hidden="true"></a></i>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-instagram" aria-hidden="true"></a></i>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-houzz" aria-hidden="true"></i></a></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--  -->
+  </div>
+</header>
 
-
-  
 </div>
+<!--  -->
+

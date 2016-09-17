@@ -36,15 +36,15 @@ get_header();  ?>
       <?php $getPath = get_bloginfo( 'url' ).'/'; ?>
       <?php //pre_r($getSlug); ?>
       <?php 
-          echo '<a href="'.$getPath.$getSlug.'">';
-          echo '<div class="port_home" style="background-image: url('.$home_thumbnail.')">';
+          // echo '<a href="'.$getPath.$getSlug.'">';
+          echo '<div class="port_home" style="background-image: url('.$home_thumbnail.')" data-link="'.$getPath.$getSlug.'">';
           echo '<div class="port_home_name">';
           echo '<h3>'.$home_title.'</h3>'; 
           echo '</div>'; 
           echo '<div class="port_overlay">';
           echo '</div>'; 
           echo '</div>'; 
-          echo '</a>';
+          // echo '</a>';
       ?>
       <?php wp_reset_postdata(); ?>
   

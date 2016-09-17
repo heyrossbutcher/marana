@@ -5,6 +5,15 @@
 	</footer> -->
 	
 </div> <!-- /.wrapper -->
+<?php 
+$title = get_the_title();
+  
+  if(is_page_template( 'room-page.php' )){
+    $is_room_page = true;
+  } else {
+   $is_room_page = false;
+  }
+ ?>
 <div class="overlay">
   <!--  -->
     <div class="closeOverlayButton">
@@ -20,7 +29,6 @@
           <?php the_content(); ?>
         <?php wp_reset_postdata(); ?>
         <?php endwhile; ?>
-
       
 
    </div>
@@ -30,9 +38,50 @@
     
   </div>
   <!--  -->
-  <div class="imageSlider">
+  <div class="imageSlider flexslider-rooms">
+    <?php if( $is_room_page !== '' ): ?>
+     <!--    //  -->
+    <?php
+      $page = get_page_by_title( $title );
+      $mypost = get_the_id($page);
+      
+    ?>
+    <!--  -->
+    <?php $latestPosts = new wp_query(array(
+        'post_type' => 'rooms',//we only want home pieces
+        'posts_per_page' => -1
+      )) ?> 
+        <!-- // -->
+        <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
+
+        <?php 
+          $fs_getTitle = get_the_title();
+            $fs_rooms = get_field('rooms');  
+            //
+            if ( $title == $fs_getTitle ) {
+              
+              echo '<ul class="slides clearfix">';
+              foreach ($fs_rooms as $fs_room) {
+                  $fs_url = $fs_room['room_image']['url'];
+                  $fs_room_thumbnail = $fs_room['room_image']['sizes']['large'];
+                  echo '<li>';
+                  echo '<img src="'.$fs_room_thumbnail.'"/>';
+                  echo '</li>';
+              }
+              echo '</ul>';
+            }
+          //
+        ?>
+
+        <?php wp_reset_postdata(); ?>
+
+        <?php endwhile; // end of the loop. ?>
+
+
+   <?php endif; ?>
     
   </div>
+
   <!--  -->
 <script>
 /* Google Analytics! */
@@ -43,9 +92,8 @@
 </script>
 
 <?php wp_footer(); ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlVgCq7VmzIePSLj2My10Up2PrUqfCDnU&callback=initMap"
-    async defer>
-</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlVgCq7VmzIePSLj2My10Up2PrUqfCDnU&callback=initMap" async defer></script>
 <!--  -->
 </body>
 </html>

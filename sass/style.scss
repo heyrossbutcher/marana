@@ -149,6 +149,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 img {
   max-width: 100%;
+  max-height: 100%;
   height: auto; }
 
 /* ;;;Global Classes / Wordpress Specific */
@@ -185,6 +186,7 @@ html,body {
   background: #2a2420;
   // background: #ffffff;
    }
+
 
 body.postid-11 {
   background: goldenrod; }
@@ -255,7 +257,7 @@ body.single-post {
     }
     input.wpcf7-submit{
       color: #fff;
-      font-style: none;
+      font-style: normal;
       border: none;
       background: #848c5e;
       transition: background 0.5s ease;
@@ -308,8 +310,10 @@ body.single-post {
   }
   //
   .imageSlider{
-    width: 60%;
-    max-width: 1000px;
+
+    // width: 60%;
+    // max-width: 1000px;
+    // max-height: 50vh;
     position: absolute;
     top:50%;
     left:50%;
@@ -317,12 +321,16 @@ body.single-post {
     transform: translate(-50%, -50%);
     opacity: 0;
     // overflow:hidden;
-    img{
-      width: 100%;
+    .slides {
+      li{
+        text-align: center;
+      }
+
     }
   }
-}
 
+}
+//
 .wrapper {
   max-width: 100%;
   background: #f7f7f5;
@@ -339,6 +347,13 @@ header{
   width: 20%;
   max-width:320px;
   height: 100%;
+  .nav-container-mobile{
+    display: none;
+  }
+  .nav-wrapper-mobile{
+    display: none; 
+    height: 100%;
+  }
   .nav-wrapper{
     // background: #ffffff;
     background: #f7f7f5;
@@ -538,6 +553,9 @@ ul.menu li a {
   /* =============================================================================
              CUSTOM STYLING 
   ========================================================================== */
+  .mobileHome{
+    display: none;
+  }
   ////////  HOME GALLERY  ////////////
   .homeGallery{
     font-family: 'Taviraj', serif;
@@ -835,7 +853,7 @@ ul.menu li a {
                 width: 7px;
                 height: 7px;
                 padding-right: 10px;
-                content: url('http://localhost:8888/078-Marana/Production/wp-content/themes/heyross/img/bullet.png');
+                content: url('http://heyross.io/demo/marana/wp-content/themes/heyross/img/bullet.png');
               }
 
             }
@@ -909,7 +927,7 @@ ul.menu li a {
   ////////  ROOMS  ////////////
   .rooms{
     .rooms_imgs{
-      width: 32.333%;
+      width: 32.666%;
       height: 49.5vh;
       margin-right: 1%;
       margin-top: 1%;
@@ -920,6 +938,12 @@ ul.menu li a {
       float: left;
       position: relative;
       //
+      &:nth-child(-n+3){
+        margin-top: 0;
+      }
+      &:nth-child(3n){
+        margin-right: 0;
+      }
       &:hover .rooms_imgs_overlay{
         opacity: .7;
       }
@@ -947,7 +971,6 @@ ul.menu li a {
     }
   }
   ////////  PORTFOLIO  ////////////
-
   .portfolio{
     .top_row_home{
       width: 99%!important;
@@ -957,14 +980,21 @@ ul.menu li a {
       width: 49%!important;
     }
     .port_home{
-      width: 32.333%;
+      width: 32.666%;
       height: 49.5vh;
       margin-right: 1%;
       margin-top: 1%;
       background-size: cover;
       background-position: center center;
       float: left;
-      position: relative;
+      position: relative;  
+      cursor: pointer; 
+      &:nth-child(-n+3){
+        margin-top: 0;
+      }
+      &:nth-child(3n){
+        margin-right: 0;
+      }
       //
       &:hover .port_home_name{
         background: #848c5e;
@@ -1010,26 +1040,17 @@ ul.menu li a {
   }
   //
 .stories{
-    .top_row_home{
-      width: 99%!important;
-      margin-top: 0!important;
-    }
-    .lower_row_home{
-      width: 49%!important;
-    }
+   
     .port_home{
-      width: 49.5%;
+      width: 49%;
       height: 49.5vh;
       margin-right: 1%;
-      margin-bottom: 1%;
+      margin-bottom: 1vh;
       background-size: cover;
       background-position: center center;
       float: left;
       position: relative;
-      &:nth-child(2) {
-          margin-right: 0;
-          opacity: 0;
-      }
+
       //
       &:hover .port_home_name{
         background: #848c5e;
@@ -1072,6 +1093,16 @@ ul.menu li a {
 
       }
     }
+    //
+    .top_row_home{
+      width: 99%!important;
+      // height: 50vh;
+    }
+    .lower_row_home{
+      width: 49%!important;
+      margin-bottom: 0;
+      // height: 49.5vh;
+    }
   }
   // 
   @keyframes rotate {
@@ -1102,7 +1133,7 @@ ul.menu li a {
     top:0;
     width: 100%;
     height: 100%;
-    background: rgba($brown, .7);
+    background: rgba($brown, .85);
     z-index: 2000;
     opacity: 0;
     transition: opacity .5s $douce;
@@ -1168,7 +1199,7 @@ ul.menu li a {
     margin-bottom: 2vh;
     //
     .showcase01{
-      height: 56vh;
+      height: 55vh;
       position: relative;
       transition: opacity 1s ease;
       .rolloverTitle{
@@ -1250,7 +1281,7 @@ ul.menu li a {
     //
     .showcase02{
       // display: none;
-      height: 59vh;
+      height: 58vh;
       position: relative;
       transition: opacity 1s ease;
       .rolloverTitle{
@@ -1378,11 +1409,9 @@ ul.menu li a {
     }
   }
  //
- // .scrolling_bg{
- //   background: #fff no-repeat fixed 0 0;
- //   overflow:auto;
-
- // }
+ .roomCloseOverlayButton{
+  display: none;
+ }
   //
   .contact{
     background-size: cover;
@@ -1475,6 +1504,7 @@ ul.menu li a {
       }
       .mapRow{
         width: 100%;
+        min-height: 70vh;
         float: left;
         clear: both;
         position: relative;
@@ -1485,13 +1515,14 @@ ul.menu li a {
           background: #f7f7f5;
           top: 0;
           padding: 40px;
+          padding-bottom: 5px;
           img{
             width: 100%;
           }
           //
           .contactImage{
             width: 50%;
-            height: 63vh;
+            height: 60vh;
             float: left;
             overflow: hidden;
             .innerContactImage{
@@ -1532,7 +1563,6 @@ ul.menu li a {
             }
           }
           //
-          
         }
         .map01{
           width: 100%;
@@ -1553,6 +1583,15 @@ ul.menu li a {
           }
         }
       }
+      .numberRow{
+        float: left;
+        width: 100%;
+        background: #fff;
+        font-size: 1vw;
+        padding: 15px;
+        text-align: center;
+      }
+       
     }
     .wpcf7 p{
       margin: 5px 0; 
@@ -1594,6 +1633,15 @@ ul.menu li a {
       }
     }
     
+  }
+  //
+  .cImageHolder{
+    display: none;
+  }
+  //
+  div.wpcf7-mail-sent-ok{
+    border: 0!important;
+    font-size: 1.05vw!important;
   }
   //
   .ajax-loader{
@@ -1649,7 +1697,7 @@ ul.menu li a {
     animation: none!important;
   }
   .invisible{
-    opacity: 0;
+    opacity: 0!important;
   }
   .display-hide{
     display: none!important;
@@ -2059,6 +2107,7 @@ nav {
       }
       .flex-direction-nav a {
         text-decoration: none;
+        // background: #000;
         display: block;
         width: 40px;
         height: 40px;
@@ -2066,10 +2115,11 @@ nav {
         position: absolute;
         top: 50%;
         z-index: 10;
+        // border-radius: 50%;
         overflow: hidden;
-        opacity: 0;
+        opacity: 1;
         cursor: pointer;
-        color: rgba(0, 0, 0, 0.8);
+        color: #848c5e;
         text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
@@ -2082,18 +2132,26 @@ nav {
         font-size: 40px;
         display: inline-block;
         content: '\f001';
-        color: rgba(0, 0, 0, 0.8);
+        color: #848c5e;
         text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
       }
+
       .flex-direction-nav a.flex-next:before {
         content: '\f002';
       }
+
       .flex-direction-nav .flex-prev {
         left: -50px;
+        &:hover{
+          opacity: .75;
+        }
       }
       .flex-direction-nav .flex-next {
         right: -50px;
         text-align: right;
+        &:hover{
+          opacity: .75;
+        }
       }
       .flexslider:hover .flex-direction-nav .flex-prev {
         opacity: 0.7;
@@ -2157,7 +2215,7 @@ nav {
         height: 11px;
         display: block;
         background: #666;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.25);
         cursor: pointer;
         text-indent: -9999px;
         -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -2170,11 +2228,11 @@ nav {
       }
       .flex-control-paging li a:hover {
         background: #333;
-        background: rgba(0, 0, 0, 0.7);
+        background: #848c5e;
       }
       .flex-control-paging li a.flex-active {
         background: #000;
-        background: rgba(0, 0, 0, 0.9);
+        background: #848c5e;
         cursor: default;
       }
       .flex-control-thumbs {
@@ -2210,17 +2268,22 @@ nav {
       /* ====================================================================================================================
        * RESPONSIVE
        * ====================================================================================================================*/
-      @media screen and (max-width: 860px) {
-        .flex-direction-nav .flex-prev {
-          opacity: 1;
-          left: 10px;
-        }
-        .flex-direction-nav .flex-next {
-          opacity: 1;
-          right: 10px;
-        }
-      }
+      // @media screen and (max-width: 860px) {
+      //   .flex-direction-nav .flex-prev {
+      //     opacity: 1;
+      //     left: 10px;
+      //   }
+      //   .flex-direction-nav .flex-next {
+      //     opacity: 1;
+      //     right: 10px;
+      //   }
+      // }
 
+      .col1 .flexslider-showcase1 .slides > li { 
+        -webkit-transition: opacity 1.5s ease!important; 
+        -moz-transition: opacity 1.5s ease!important;
+         transition: opacity 1.5s ease!important; 
+      }
 
 
 
