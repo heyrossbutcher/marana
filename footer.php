@@ -93,7 +93,7 @@ $title = get_the_title();
 
 <?php wp_footer(); ?>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlVgCq7VmzIePSLj2My10Up2PrUqfCDnU&callback=initMap" async defer></script>
+
 <!--  -->
 </body>
 </html>

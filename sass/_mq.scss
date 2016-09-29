@@ -477,12 +477,625 @@
 //////////////////////////////////////
 //////////////////////////////////////
 //////////////////////////////////////
-
-//////////////////////////////////////
-//////////////////////////////////////
-//////////////////////////////////////
-@media screen and (max-width: 528px) {
+@media only screen 
+and (max-width : 736px) {
 	$douce: cubic-bezier(.5,.5,.5,1);
+	//
+	.roomsHook{
+		display: none;
+	}
+	//
+	header{
+		width: 100%;
+		max-width: 100%;
+		background: #f7f7f5;
+		height: 18vh;
+		.nav-wrapper-mobile{
+		  display: block; 
+		  position: fixed;
+		  z-index: 90001;
+		  width: 100%;
+			height: 18vh;
+		  background: #f7f7f5;
+		}
+		h1{
+			width: 40%;
+			float: left;
+			padding: 2% 12% 0 4%;
+			margin-right: 45%;
+		}
+		.hamMenu{
+			position: relative;
+			width: 15%;
+			height: 100%;
+			float: left;
+			font-size: 4vw;
+			z-index: 90002;
+			background: #f7f7f5;
+			transition: all .5s $douce;
+			//
+			.nav{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);	
+			}	
+		}
+	}
+	// 
+	.nav-container-mobile{
+		display: block!important;
+		position: fixed;
+		top:-100vh;
+		background: rgba($brown, .95);
+		margin: 0;
+		width: 100%;
+		height: 85vh;
+		z-index: 90000;
+		text-align: center;
+		padding-top: 30px;
+		transition: top .5s $douce;
+		#menu-primary-navigation-1{
+			font-size: 4vw;
+			line-height: 1.5;
+		}
+		.nav-container-mobile-bottom{
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 50%;
+			padding-bottom: 35px;
+			.icon{
+				padding-bottom: 10px;
+				width: 100%;
+				float: right;
+				clear: right;
+
+					ul{
+					  margin: 0;
+					  padding: 0;
+					  li{
+					    margin: 0;
+					    padding: 0;
+					    padding-right: 15%;
+					  display: inline;
+					  &:last-child{
+					    padding-right: 0;
+					  }
+					 
+					  a{
+					    font-size: 7.5vw;
+					    color: $white;
+					    transition: all .25s $douce;
+					    &:hover{
+					      color: $green 
+					    }
+					  }
+					}
+				}
+			}
+			.consult {
+				padding-bottom: 20px;
+				width: 100%;
+				float: right;
+				clear: right;
+				p{
+				// .consultationFooter .consultation p {
+				    display: inline-block;
+				    color: #fff;
+				    font-family: 'Taviraj', serif;
+				    font-size: 3.5vw;
+				    font-weight: 300;
+				    text-align: center;
+				    border: 1px solid #fff;
+				    border-radius: 4px;
+				    padding: 10px 50px;
+				    cursor: pointer;
+				    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
+				// }
+				}
+			}
+			.social{
+				width: 100%;
+				float: right;
+				clear: right;
+				padding-bottom: 20px;
+					ul{
+					  margin: 0;
+					  padding: 0;
+					  li{
+					    margin: 0;
+					    padding: 0;
+					    padding-right: 10%;
+					  display: inline;
+					  &:last-child{
+					    padding-right: 0;
+					  }
+					 
+					  a{
+					    font-size: 6vw;
+					    color: $white;
+					    transition: all .25s $douce;
+					    &:hover{
+					      color: $green 
+					    }
+					  }
+					}
+				}
+			}
+		}
+	}
+	
+	/////////////////////////////
+	.nav-slide-in{
+		top: 18vh!important;
+	}
+	.bg-brown{
+		background: rgba($brown, .95)!important;
+		color: $white!important;
+	}
+	/////////////////////////////
+	//
+	.nav-container-mobile #menu-primary-navigation-1, .nav-container-mobile #menu-primary-navigation {
+	    font-size: 4vw;
+	    line-height: 1.5;
+	    width: 50%;
+	    text-align: left;
+	    padding-left: 15%;
+	    float: left;
+	}
+	ul.menu {
+		margin: 0;
+		float: left;
+		text-align: left;
+	}
+	ul.menu li a{
+		color: $white!important;
+		font-size: 4vw;
+		line-height: 1.65;
+	}
+	// 
+	.containerHook{
+		display: none;
+	}
+	///////////////////
+	///////////////////
+	.mobile-fadeIn{
+		opacity: 1!important;
+	}
+	.mobile-bringIt{
+		z-index: 5000!important;
+	}
+	///////////////////
+	///////////////////
+	.mobileHome{
+		font-family: 'Taviraj', serif;
+		font-weight: 300;
+		display: block;
+		position: relative;
+		height: 85vh;
+		background: #f7f7f5;
+		//
+		.slides{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			z-index: 5000;
+			li{
+				position: absolute;
+				top:0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: opacity 1.5s $douce;
+				.mobileShowcaseHolder{
+					position: absolute;
+					top:0;
+					left:0;
+					width: 100%;
+					height: 100%;
+					//
+					background-size: cover;
+					background-position: center center;
+					.titleOverlay{
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+						background: rgba($brown, .85);
+						padding: 20px 30px;
+						p{
+							font-size: 5vw;
+							color: $white;
+							margin: 0;
+						}
+						p.cta{
+							display: none;
+							font-size: 4.5vw;
+							color: rgba($white, .75);
+						}
+					}
+				}
+			}
+		}
+	}
+	.nav-wrapper{
+		display: none;
+	}
+
+	.main{
+		padding:0;
+		padding-top: 15vh;
+	}
+	.col1 {
+	    width: 100%;
+	    margin-bottom: 0;
+	    .showcase01{
+	    	height: 40vh;
+	    }
+	}
+	.col2 {
+	    width: 50%;
+	    height: 45vh;
+	    padding-left: 0;
+	    float: right;
+	    .showcase02{
+	    	height: 45vh;
+	    }
+	}
+	.col3{
+	  width: 50%;
+	  height: 45vh;
+	  float: left;
+	  .showcase03{
+	  	width: 100%;
+	  }
+	}
+	.processHolder, .aboutHolder{
+		display: none;
+	}
+	///////////////
+	///////////////
+	///////////////
+	.portfolio, .stories{
+		.port_home{
+			width: 100% !important;
+			height: 60vh;
+			margin: 0;
+			.port_home_name {
+				background: rgba($brown, .85);
+				h3{
+					font-size: 2.5vw;
+				}
+			}
+		}
+		// .lower_row_home {
+		//     width: 100% !important;
+		// }
+	}
+	///////////////
+	///////////////
+	///////////////
+	.mobileRoom{
+		height: 85vh;
+		position: relative;
+		width: 100%;
+		.roomCloseOverlayButton{
+			display: block;
+			position: absolute;
+			top: 5%;
+			right: 10%;
+			z-index: 89999;
+			width: 25px;
+		}
+		.handInstruction{
+			opacity: .85;
+			width: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgba($brown, .75);
+			font-size: 4rem;
+			z-index: 89998;
+			background: $white;
+			padding: 10px 0;
+			border-radius: 5px;
+			transition: opacity 1s ease;
+			.leftArrow{
+				float: left;
+				width: 33%;
+				text-align: center;
+			}
+			.hand{
+				float: left;
+				width: 33%;
+				text-align: center;
+			}
+			.rightArrow{
+				float: left;
+				width: 33%;
+				text-align: center;
+			}
+
+		}
+		.flex-viewport{
+			height: 100%;
+			.slides{
+				height: 100%;
+				.roomSlides {
+				    width: 100%;
+				    height: 100%;
+				    opacity: 1!important;
+				    background-size: contain; 
+				    background-repeat: no-repeat;
+				    background-position: center;
+				}
+			}
+		}
+	}
+	///////////////
+	///////////////
+	///////////////
+	.mobile-map{
+		font-family: 'Taviraj', serif;
+		font-weight: 300;
+		font-size: 2.5vw;
+		height: 85vh;
+		.topRow{
+			width: 100%;
+			position: absolute;
+			height: 15vh;
+			top: 0;
+			.tabOne{
+				padding: 20px;
+				padding-left: 25px;
+				float: left;
+				width: 50%;
+				height: 100%;
+				opacity: .85;
+				color: $white;
+				background: rgba($brown, 0.8);
+				.title{
+					font-size: 3.5vw;
+					font-weight: 400;
+				}
+				p{
+					margin: 0;
+				}
+			}
+			.tabTwo{
+				// display: none;
+				padding: 20px;;
+				padding-left: 25px;
+				float: left;
+				width: 50%;
+				height: 100%;
+				opacity: .85;
+				color: $white;
+				background: rgba($brown, 0.8);
+				.title{
+					font-size: 3.5vw;
+					font-weight: 400;
+				}
+				p{
+					margin: 0;
+				}
+
+			}
+
+		}
+		.mapRow{
+			position: absolute;
+			top: 15vh;
+			width: 100%;
+			height: 70vh;
+			.map01, .map02{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.map-tab-opacity{
+		opacity: 1!important;
+		background: rgba(247, 247, 245, 0.8)!important;
+		color: $brown!important;
+	}
+	//////////////////
+	.contact{
+		height: auto;
+		.locations{
+			width: 100%;
+			margin-left: 0;
+			background: $white;
+			// background: none;
+			.topRow, .contactImage, .map01, .map02, .consultTwo{
+				display: none;
+			}
+			.numberRow{
+			    font-size: 4vw;
+			    height: 10vh;
+			    padding: 15px;
+			    padding-top: 20px;
+			    background: #f7f7f5;
+			}
+			.mapRow{
+			    min-height: auto;
+			    height: 75vh;
+				.contactFormSpace {
+				    height: auto;
+				    padding: 0 30px;
+				    padding-top: 8px;
+				    background: #fff;
+				    .contactForm{
+				    	padding: 0;
+				    	width: 100%;
+				    	margin-top: 25px;
+				    	h3{
+				    		font-size: 4vw;
+				    	}
+				    }
+				}
+			}
+		}
+		.wpcf7 input {
+			font-size: 1.75rem;	
+		}
+		.wpcf7 textarea {
+		    font-size: 1.75rem;
+		    padding: 8px;
+		    margin-top: 4px;
+		    margin-bottom: 10px;
+		    height: 30vh;
+		}
+
+	}
+	//
+	.wpcf7-not-valid-tip, .wpcf7-validation-errors {
+	    font-size: 3.25vw !important;
+	}
+	//
+	.contact input.wpcf7-submit, .overlay .consultationForm input.wpcf7-submit{
+	    padding: 8px;
+	    font-size: 2.5vw;
+	}
+	//////////////////
+	//////////////////
+	//////////////////
+	.overlay .consultationForm {
+	    position: absolute;
+	    top: 15vh;
+	    width: 100%;
+	    left: auto;
+	    transform: none;
+	    padding: 0 30px;
+	    padding-top: 40px;
+	    h2{
+	    	font-size: 7vw;
+	    }
+	}
+	/////////
+	.consultationFooter {
+		display: none;
+		padding: 20px 0;
+		.consultation{
+
+		//
+		p{
+			font-size: 4.5vw;
+		}
+		//
+	}
+	} 
+	/////////////////////
+	/////////PROCESS
+	/////////////////////
+	.process .process_block .process_key {
+	    height: 55vh;
+	}
+	.process .process_block .process_key .innerKey {
+	    transform: scale(1.1);
+	}
+	.process .process_block .process_collect {
+	    display: block;
+	}
+	.process .process_block .process_collect{
+		.process_copy {
+		    width: 80%;
+		    padding-top: 40px;
+		}
+		.process_image_left, .process_image_right {
+		    display: none;
+	    } 
+	}
+	//////////////
+	//////////////
+	//////////////
+	.about .two_column_copy {
+	    column-count: 1;
+	}
+	.about .image_with_copy_overtop .copyBlock {
+	    width: 80vw;
+	}
+	.about .full_width_image {
+	    height: 30vh;
+	}
+	.about .copy_and_image, .about .image_and_copy {
+	    margin: 0;
+	    display: block;
+	    .image{
+	    	height: 200px;
+			margin-left: 0;
+			margin-right: 0;
+	    }
+	    .image, .copy{
+	    	width: 100%;
+	    }
+	    .copy{
+			padding: 10%;
+	    }
+	}
+
+
+	.about .copy_and_image{
+		.image{
+			float: none;
+			padding-left: 10%;
+		    background-position: 50px center;
+		    background-repeat: no-repeat;
+		}
+		.copy{
+			padding-top: 150px;
+		}
+	}
+	////////
+	////////
+	////////
+	.homeGallery .full_width_image {
+	    height: 25vh;
+	    margin-bottom: 0;
+	}
+	.homeGallery .showcaseTitle {
+	    margin: 25px 10% 40px;
+	}
+	.homeGallery .showcaseTitle {
+	    line-height: 1.15;
+	    padding-bottom: 15px;
+	}
+	.homeGallery .two_column_copy {
+	    column-count: 1;
+	}
+	.homeGallery .image_and_copy, .homeGallery .copy_and_image{
+		margin-top: 40px;
+		display: block;
+		.copy, .image{
+			float: none;
+			width: 100%;
+		}	
+		.image{
+			height: 200px;
+		}
+		.copy{
+			padding-left: 0;
+			margin-top: 30px;
+		}
+	} 
+	.homeGallery .image_with_margin {
+	    width: 100%;
+	    margin: 0 0 60px;
+	}
+	
+}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media only screen 
+and (max-width : 500px) {
+	$douce: cubic-bezier(.5,.5,.5,1);
+	//
+	.roomsHook{
+		display: none;
+	}
 	//
 	header{
 		width: 100%;
@@ -501,6 +1114,7 @@
 			width: 75%;
 			float: left;
 			padding: 6% 12% 0 7.5%;
+			margin-right: 0;
 		}
 		.hamMenu{
 			position: relative;
@@ -531,19 +1145,23 @@
 		height: 85vh;
 		z-index: 90000;
 		text-align: center;
-		padding-top: 30px;
+		padding-top: 20px;
 		transition: top .5s $douce;
-		#menu-primary-navigation-1{
-			font-size: 5vw;
-			line-height: 2.5;
+		#menu-primary-navigation-1, #menu-primary-navigation{
+			font-size: 7vw;
+			line-height: 1.5;
+			text-align: center;
+			width: 100%;
+			padding-left: 0;
 		}
 		.nav-container-mobile-bottom{
 			position: absolute;
 			bottom: 0;
+			left:0;
 			width: 100%;
-			padding-bottom: 35px;
+			padding-bottom: 60px;
 			.icon{
-				padding-bottom: 20px;
+				padding-bottom: 0;
 				width: 100%;
 					ul{
 					  margin: 0;
@@ -569,7 +1187,8 @@
 				}
 			}
 			.consult {
-				padding-bottom: 20px;
+				padding-bottom: 0;
+				width: 100%;
 				p{
 				// .consultationFooter .consultation p {
 				    display: inline-block;
@@ -624,10 +1243,13 @@
 	}
 	/////////////////////////////
 	//
+	ul.menu{
+		text-align: center;
+	}
 	ul.menu li a{
 		color: $white!important;
-		font-size: 5vw;
-		line-height: 2.5;
+		font-size: 6vw;
+		line-height: 1.8;
 	}
 	// 
 	.containerHook{
@@ -678,7 +1300,7 @@
 						bottom: 0;
 						width: 100%;
 						background: rgba($brown, .85);
-						padding: 20px 30px;
+						padding: 60px 30px 90px;
 						p{
 							font-size: 6.5vw;
 							color: $white;
@@ -1050,6 +1672,7 @@
 }
 
 
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
@@ -1141,15 +1764,33 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 	.main {
 	    padding-left: 25%;
 	}
+	.overlay .consultationForm {
+	    width: 60%;
+	    padding: 0;
+	}
+	.col1 .showcase01 .rolloverTitle .rolloverP {
+	    margin-top: 0;
+	}
+	.col2 .showcase02 .rolloverTitle .rolloverP {
+	    margin-top: 0;
+	}
+	.col3 .showcase03 .rolloverTitle .rolloverP {
+	    margin-top: 0;
+	}
+
 	.col1 {
 	    width: 100%;
 	    float: left;
         margin-bottom: 1vh;
 	    .showcase01 {
 	        height: 32.666vh;
+	        .rolloverTitle .rolloverP{
+    			font-size: 2.25vw;
+    		}
 	    }
 	}
 	.col2 {
+
 	    width: 100%;
 	    height: 32.666vh;
 	    padding-left: 0;
@@ -1157,29 +1798,46 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 	    float: left;
 	    .showcase02 {
 	        height: 100%;
-	        width: 60%;
+	        width: 58%;
 	        float: left;
-		    padding-left: 1vh;
+		    // padding-left: 1vh;
+		    .rolloverTitle .rolloverP{
+    			font-size: 2.25vw;
+    		}
 	    }
 	    .processHolder {
 	        height: 100%;
 	        margin-bottom: 0;
 	        width: 40%;
 	        float: left;
+            margin-right: 2%;
+	        .rolloverTitle .rolloverP{
+    			font-size: 2.25vw;
+    		}
 	    }
 	}
 	.col3 {
+		.aboutHolder .aboutInnerHolder .rolloverTitle .rolloverP{
+			font-size: 2.25vw;
+		}
 		width: 100%;
 		height: 32.666vh;
 		.showcase03 {
 		    float: left;
+		    width: 45%;
+		    .rolloverTitle .rolloverP{
+    			font-size: 2.25vw;
+    		}
 		}
 		.aboutHolder {
 		    position: relative;
-		    width: 60%;
+		    width: 55%;
 		    height: 100%;
 		    padding-right: 1vh;
 		    float: left;
+		    .rolloverTitle .rolloverP{
+    			font-size: 2.25vw;
+    		}
 		}
 	}
 
@@ -1236,6 +1894,22 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 	.col3 .showcase03 .rolloverTitle .rolloverIcon  {
 	    display: none;
 	}
+
+	.rollover {
+		display: block;
+	    opacity: 0;
+        top: auto;
+        bottom: 0;
+        height: 7vw;
+        	transition: opacity 1.5s $douce;
+        .rolloverTitle{
+        	display: block;
+        }
+        .rolloverP{
+        	margin: 0;
+        	padding: 0;
+        }
+	}
 }
 /////////////////////////
 /////////////////////////
@@ -1247,10 +1921,20 @@ and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 1)  { 
 
 			.rollover {
-			    opacity: 1;
+				display: block;
+			    opacity: 0;
 		        top: auto;
 		        bottom: 0;
 		        height: 7vw;
+		        	transition: opacity 1.5s $douce;
+		        .rolloverTitle{
+		        	display: block;
+		        }
+		        .rolloverP{
+		        	margin: 0!important;
+		        	padding: 0!important;
+		        }
+
 			}
 			.col1 .showcase01 .rolloverTitle, .col2 .showcase02 .rolloverTitle, .col3 .showcase03 .rolloverTitle, .col2 .processHolder .rolloverTitle, .col3 .aboutHolder .aboutInnerHolder .rolloverTitle {
 				opacity: 1;
@@ -1264,5 +1948,63 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 			.col3 .showcase03 .rolloverTitle .rolloverIcon  {
 			    display: none;
 			}
+			//
+			.col1 .showcase01 .rolloverTitle .rolloverP {
+			    font-size: 2.25vw;
+			}
+			.col2 .showcase02 .rolloverTitle .rolloverP {
+			    font-size: 2.25vw;
+			}
+			.col2 .processHolder .rolloverTitle .rolloverP {
+			    font-size: 2.25vw;
+			}
+			.col3 .showcase03 .rolloverTitle .rolloverP {
+			    font-size: 2.25vw;
+			}
+			.col3 .aboutHolder .aboutInnerHolder .rolloverTitle .rolloverP {
+			    font-size: 2.25vw;
+			}
+
+			.col3 .aboutHolder {
+				width: 45%;
+			}
+			.col3 .showcase03 {
+			    width: 55%;
+			}
+}
+
+@media only screen 
+  and (max-device-width: 320px)  {
+
+
+	ul.menu li a{
+		color: $white!important;
+		font-size: 6vw;
+		line-height: 1.8;
+	}
+	// 
+	.nav-container-mobile{
+
+		padding-top: 20px;
+
+		.nav-container-mobile-bottom{
+			padding-bottom: 10px;
+			.icon{
+				padding-bottom: 0;
+				width: 100%;
+					
+				}
+			}
+			.consult {
+				padding-bottom: 0;
+			}
+			
+		}
+		.nav-container-mobile .nav-container-mobile-bottom .social {
+		    padding-bottom: 20px;
+		}
+		.nav-container-mobile .nav-container-mobile-bottom .consult {
+		    padding-bottom: 0;
+		}
 
 }

@@ -80,7 +80,7 @@ get_header();  ?>
                 <?php 
                     if( $process_title == 'Process' ){
                         echo '<a href="'.$process_link.'">';
-                        echo '<div class="process processHolder  flexslider-process panelBtn invisible">';
+                        echo '<div class="process processHolder flexslider-process panelBtn invisible">';
                         echo '<div class="rollover">';
                         echo '<div class="rolloverTitle"><div class="rolloverP">'.$process_title.'</div></div>';
                         echo '</div>';
@@ -90,7 +90,7 @@ get_header();  ?>
                             $processCounter++;
                             $process_image = $process_item['panel_image']['sizes']['large'];
                         //     // pre_r($process_item['panel_image']['sizes']['large']);
-                            echo '<li style="background-image: url('.$process_image.')"></li>';
+                            echo '<li class="sh-02-'.$processCounter.'" style="background-image: url('.$process_image.')"></li>';
                         }
                         echo '</ul>';
                         echo '<div class="preloader"></div>';
@@ -138,7 +138,7 @@ get_header();  ?>
                                 } else if( $whatImage == 'copy_and_image' || $whatImage == 'image_and_copy' ){
                                     $theImageTwo = $home_info[$whatImage][0]['image_choice'][0]['image']['sizes']['large'];   
                                 }
-                                echo '<li class="sh-02-'.$twoCounter.'" style="background-image: url('.$theImageTwo.')"></li>';
+                                echo '<li class="sh-03-'.$twoCounter.'" style="background-image: url('.$theImageTwo.')"></li>';
                             }
                         }
                         echo '</ul>';
@@ -180,7 +180,7 @@ get_header();  ?>
                             $aboutCounter++;
                             $about_image = $about_item['panel_image']['sizes']['large'];
                         //     // pre_r($process_item['panel_image']['sizes']['large']);
-                            echo '<li style="background-image: url('.$about_image.')"></li>';
+                            echo '<li class="sh-05-'.$aboutCounter.'" style="background-image: url('.$about_image.')"></li>';
                         }
                         echo '<ul>';
                         echo '<div class="preloader"></div>';
@@ -231,7 +231,7 @@ get_header();  ?>
                                 } else if( $whatImage == 'copy_and_image' || $whatImage == 'image_and_copy' ){
                                     $theImageThree = $home_info[$whatImage][0]['image_choice'][0]['image']['sizes']['large'];   
                                 }
-                                echo '<li style="background-image: url('.$theImageThree.')"></li>';
+                                echo '<li class="sh-04-'.$threeCounter.'" style="background-image: url('.$theImageThree.')"></li>';
                             }
                         }
                         echo '</ul>';

@@ -540,13 +540,13 @@ app.showOverlay = function(){
 	});
 }
 ///////
-$('.flexslider-room-mobile').on('tap', function(){
+$('.flexslider-room-mobile').on('touchstart', function(){
 	setTimeout(function(){
 		$('.handInstruction').addClass('invisible');
 		setTimeout(function(){
 			$('.handInstruction').addClass('display-hide');
 		}, 1000);
-	}, 2500);
+	}, 500);
 });
 ///////////////////
 app.windowHeight = $(window).height();
@@ -561,7 +561,7 @@ app.phoneRotation = function(){
 
 	app.mobileHpImg.addClass('mobile-fadeIn');
 	//
-	if(app.isMobile === true && app.windowWidth < 528){
+	if(app.isMobile === true && app.windowWidth < 737){
 		mCount = 1;
 		var mobileHomeImage = setInterval(function(){
 			//
@@ -577,8 +577,66 @@ app.phoneRotation = function(){
 				app.mobileHpImg.addClass('mobile-fadeIn');
 			}, 1500)
 
-		}, 5500);
+		}, 7000);
 	}
+}
+//////////////
+//////////////
+//////////////
+app.tabletRotation = function(){
+
+	if(app.isMobile === true && app.windowWidth < 1025 && app.windowWidth > 736){
+		// alert(app.windowWidth + ' tablet!!!!');
+		$('.showcase01').removeClass('flexslider-showcase1').removeClass('invisible');
+		$('.processHolder').removeClass('flexslider-process').removeClass('invisible');
+		$('.showcase02').removeClass('flexslider-showcase2').removeClass('invisible');
+		$('.aboutHolder').removeClass('flexslider-about').removeClass('invisible');
+		$('.showcase03').removeClass('flexslider-showcase3').removeClass('invisible');
+		//
+		//
+		$('.slides > li').addClass('mobileAbsolute');
+		//
+		//
+		app.showcaseCount( '.showcase01', '1', 8000);
+		setTimeout(function(){ app.showcaseCount('.processHolder', '2', 8000); }, 1000);
+		setTimeout(function(){ app.showcaseCount('.showcase02', '3', 8000); }, 2000);
+		setTimeout(function(){ app.showcaseCount('.showcase03', '4', 8000); }, 3000);
+		setTimeout(function(){ app.showcaseCount('.aboutHolder .aboutInnerHolder', '5', 8000); }, 4000);
+	}
+}
+//////////
+app.showcaseCount = function(holder, num, delay){
+	var counter = 1;
+	var upper = $( holder + ' .slides' );
+	var lower = $( holder + ' .slides li' );
+	var rollover = $( holder + ' .rollover')
+	var target = $( '.sh-0' + num + '-' + counter );
+	var fadeIn = target;
+	var fadeOut = '';
+	var divLength = lower.length;
+	// var divLength = upper.children().length;
+	console.log(upper.attr('class') + ' : ' + divLength);
+	//
+	target.addClass('show');
+	$(holder + ' .rollover').addClass('show');
+	//
+	function timer(i, num){
+		  fadeOut = fadeIn;
+		  //
+		  fadeOut.removeClass('show');
+		  fadeIn = $( '.sh-0' + num + '-' + counter );
+		  //
+		  setTimeout(function(){
+				fadeIn.addClass('show');
+		  }, 1500);
+	}
+	  setInterval(function() {
+	  		counter++;
+	  		timer(counter, num);
+	  		if ( counter === divLength ){
+	  			counter = 0;
+	  		}
+	  }, delay);
 }
 
 ////////////////////
@@ -608,13 +666,16 @@ $(function(){
 	//
 	if( homePage ){
 		app.homePreload();
-		app.flexSliding();
+		if(app.isMobile === false){
+			app.flexSliding();
+		}
 		setTimeout(function(){
 			if(app.isMobile === false){
 				app.flexBtns();
 			}
 		}, 5000);
 		app.phoneRotation();
+		app.tabletRotation();
 		console.log('Home page');
 	}
 	//
@@ -628,6 +689,7 @@ $(function(){
 	if( app.isMobile ){
 		app.hamburgerMenu();
 		app.mobileMapReveal();
+		$('.roomsHook').css({'display':'none'});
 	}
 });
 //

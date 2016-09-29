@@ -47,3 +47,4 @@ get_header();  ?>
 
 
 <?php get_footer(); ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlVgCq7VmzIePSLj2My10Up2PrUqfCDnU&callback=initMap" async defer></script>

@@ -1685,6 +1685,16 @@ ul.menu li a {
   /* =============================================================================
                      ANIMATIONS
      ========================================================================== */
+ .mobileRelative{
+  position: relative!important;
+ }
+ .mobileAbsolute{
+  position: absolute!important;
+  top:0!important;
+  left:0!important;
+  transition: opacity 1.5s ease!important;
+
+ }
  .display_overlay{
    z-index: 10000!important;
  } 
@@ -2278,12 +2288,6 @@ nav {
       //     right: 10px;
       //   }
       // }
-
-      .col1 .flexslider-showcase1 .slides > li { 
-        -webkit-transition: opacity 1.5s ease!important; 
-        -moz-transition: opacity 1.5s ease!important;
-         transition: opacity 1.5s ease!important; 
-      }
 
 
 
