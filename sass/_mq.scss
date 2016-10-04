@@ -267,6 +267,7 @@
 	    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
 	}
 	////////////////
+
 }
 //////////////////////////////////////
 //////////////////////////////////////
@@ -352,6 +353,12 @@
 	}
 	header .nav-wrapper .consultation p {
 	    font-size: 1.25vw;
+	}
+	.navigation{
+	  padding: 60px 0 80px;
+	}
+	.navigation .nav-previous a, .navigation .nav-next a{
+		font-size: 1.5vw;
 	}
 
 }
@@ -1510,24 +1517,27 @@ and (max-width : 500px) {
 			}
 			.numberRow{
 			    font-size: 4vw;
-			    height: 10vh;
-			    padding: 15px;
+			    height: auto;
+			    padding: 30px 15px;
 			    padding-top: 20px;
 			    background: #f7f7f5;
 			}
 			.mapRow{
 			    min-height: auto;
-			    height: 75vh;
+			    height: auto;
 				.contactFormSpace {
-				    height: 75vh;
 				    padding: 0 30px;
 				    padding-top: 8px;
 				    background: #fff;
+				    position: static;
+				    min-height: auto;
+				    margin-bottom: 20px;
 				    .contactForm{
 				    	padding: 0;
 				    	width: 100%;
+					    margin-top: 0;
 				    	h3{
-				    		font-size: 6vw;
+				    		font-size: 7vw;
 				    	}
 				    }
 				}
@@ -1542,6 +1552,19 @@ and (max-width : 500px) {
 	.contact input.wpcf7-submit, .overlay .consultationForm input.wpcf7-submit{
 	    padding: 8px;
 	    font-size: 4.5vw;
+	}
+	.contact .wpcf7 input {
+	    font-size: 1.25rem;
+	    padding: 0 5px;
+
+	}
+	.contact .wpcf7 textarea {
+	    font-size: 1.25rem;
+	    padding: 2.5px 5px;
+	    height: 20vh;
+	}
+	.contact input.wpcf7-submit, .overlay .consultationForm input.wpcf7-submit{
+	    padding: 8px;
 	}
 	//////////////////
 	//////////////////
@@ -1661,12 +1684,28 @@ and (max-width : 500px) {
 		}
 		.copy{
 			padding-left: 0;
+		    padding-bottom: 30px;
 			margin-top: 30px;
 		}
 	} 
 	.homeGallery .image_with_margin {
 	    width: 100%;
 	    margin: 0 0 60px;
+	}
+
+	.navigation .nav-next a{
+		font-size: 3vw;
+		padding: 10px 15px;
+		&::after{
+		    padding-left: 10px;
+		}
+	}
+	.navigation .nav-previous a{
+		font-size: 3vw;
+		padding: 10px 15px;
+		&::before{
+		    padding-right: 10px;
+		}
 	}
 	
 }

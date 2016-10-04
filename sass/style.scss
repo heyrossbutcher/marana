@@ -187,6 +187,56 @@ html,body {
   // background: #ffffff;
    }
 
+.navigation{
+  position: static;
+  padding: 80px 0 100px;
+  text-align: center;
+  background: $brown;
+  h2{
+    display: none;
+  }
+  .nav-previous, .nav-next{
+    float: left;
+    width: 50%;
+    //
+    a{
+      font-size: 1.4vw;
+      color: white;
+      border: 1px solid $white;
+      border-radius: 4px;
+      padding: 10px 25px;
+      cursor: pointer;
+      background: $brown;
+      transition: all .5s ease;
+      &:hover{
+        background: $white;
+        color: $brown;
+      }
+    }
+  }
+  .nav-next{
+    float: right;
+    a{
+      &::after { 
+          content: "\f054"; 
+          font-family: FontAwesome;
+          font-weight: light;
+          padding-left: 15px;
+      }
+    }
+  }
+  .nav-previous{
+    a{
+      &::before { 
+          content: "\f053"; 
+          font-family: FontAwesome;
+          font-weight: light;
+          padding-right: 15px;
+      }
+    }
+  }
+
+}
 
 body.postid-11 {
   background: goldenrod; }
@@ -203,7 +253,7 @@ body.single-post {
   width: 100%;
   height: 100%;
   //
-  background: rgba(255,255,255,1);
+  background: rgba(255,255,255,.85);
   opacity: 0;
   //
   transition: opacity .5s $douce;
@@ -217,15 +267,20 @@ body.single-post {
     transform: translate(-50%, -50%);
     opacity: 0;
     z-index: -1000;
-    padding: 100px;
+    padding: 50px;
+    background: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border-radius: 10px;
     h2{
       font-family: 'Taviraj', serif;
-      font-weight: 400;
+      font-weight: bold;
       font-size: 2.5vw;
+      line-height: 1.2;
       letter-spacing: 1px;
       margin-bottom: 5px;
-      text-transform: none;
+      text-transform: uppercase;
       color: $green;
+
     }
     p{
       margin: 0;
@@ -341,9 +396,10 @@ body.single-post {
 
 header{
   // background: #2a2420;
-  position: absolute;
+  position: fixed;
   top: 0;
   left:0;
+  z-index: 90000;
   width: 20%;
   max-width:320px;
   height: 100%;
@@ -562,12 +618,12 @@ ul.menu li a {
     font-weight: 300;
       font-size: 1.4rem;
       div:last-of-type{
-        margin-bottom: 20px;
+        // margin-bottom: 40px;
       }
       // margin-bottom: 60px;
     .full_width_image{
       width: 100%;
-      height: 40vh;
+      height: 55vh;
       margin-bottom: 60px;
       overflow:hidden;
       .innerKey{
@@ -575,7 +631,7 @@ ul.menu li a {
         height: 100%;
         transform: scale(1.2);
         background-position: center 50%;
-        // background-size: cover;
+        background-size: cover;
       }
     }
     .showcaseTitle{
@@ -588,7 +644,7 @@ ul.menu li a {
     }
     .image_with_margin{
       width: 80%;
-      height: 40vh;
+      height: 55vh;
       background-size: cover;
       background-position: center center;
       margin: 0 10% 60px;
@@ -761,14 +817,14 @@ ul.menu li a {
       }
     }
     .image_and_copy{
-      margin: 70px 0 60px 10%;
+      margin: 100px 0 90px 10%;
       display: flex;
       .copy{
 
         margin: 0;
         font-size: 1.15rem;
         float: left;
-        width: 40%;
+        width: 50%;
         padding-right: 40px;
         .aboutTitle3{
           font-size: 1.6vw;
@@ -783,7 +839,7 @@ ul.menu li a {
       }
       .image{
         float: right;
-        width: 40%;
+        width: 36%;
         margin-right: 10%;
         background-size: cover;
         background-position: right center;
@@ -814,7 +870,7 @@ ul.menu li a {
           height: 100%;
           transform: scale(1.25);
           background-position: center 50%;
-          // background-size: cover;
+          background-size: cover;
         }
       }
       .process_collect{
@@ -901,20 +957,17 @@ ul.menu li a {
     // margin-top: 40px;
     p{
       display: inline-block;
-    color: $white;
-    font-family: 'Taviraj', serif;
-    font-size: 1.5vw;
-    font-weight: 300;
-    text-align: center;
-   border: 1px solid $white;
-    border-radius: 4px;
-    padding: 10px 50px;
-    //
-
-    // margin: 40px 35%;
-    cursor: pointer;
-    //
-    transition: all .25s $douce;
+      color: $white;
+      font-family: 'Taviraj', serif;
+      font-size: 1.5vw;
+      font-weight: 300;
+      text-align: center;
+      border: 1px solid $white;
+      border-radius: 4px;
+      padding: 10px 50px;
+      cursor: pointer;
+      //
+      transition: all .25s $douce;
     &:hover{
       color: white;
       background: #848c5e;
@@ -1338,6 +1391,7 @@ ul.menu li a {
         width: 100%;
         height: 100%;
         position: relative;
+          background-size: cover;
         .about{
           width: 100%;
           height: 100%;
@@ -1696,7 +1750,7 @@ ul.menu li a {
 
  }
  .display_overlay{
-   z-index: 10000!important;
+   z-index: 95000!important;
  } 
   .show{
     opacity: 1!important;
@@ -1985,7 +2039,7 @@ footer {
   text-align: center; }
 
 nav {
-  max-width: 1100px;
+  // max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.9);

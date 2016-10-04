@@ -233,30 +233,30 @@ app.flexSliding = function(){
 		// //
 		setTimeout(function(){
 		$('.processHolder .rollover, .processHolder .rolloverTitle').addClass('display-show');
-		//
+	// 	//
 		$('.processHolder').removeClass('invisible');
-		//
-		$('.flexslider-process').flexslider({
-			animation: "fade", 
-			controlNav: false,   
-			directionNav: false, 
-			slideshowSpeed: 9000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
-			animationSpeed: 1500,
-			pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-			pauseOnHover: false,
-			easing: "swing",
-			pausePlay: false,
-			before: function(slider) {
-			        // TODO: check if the browser supports css animations before delaying the slides
+	// 	//
+	// 	$('.flexslider-process').flexslider({
+	// 		animation: "fade", 
+	// 		controlNav: false,   
+	// 		directionNav: false, 
+	// 		slideshowSpeed: 9000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+	// 		animationSpeed: 1500,
+	// 		pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+	// 		pauseOnHover: false,
+	// 		easing: "swing",
+	// 		pausePlay: false,
+	// 		before: function(slider) {
+	// 		        // TODO: check if the browser supports css animations before delaying the slides
 
-			        // delay slide fadeOut to show the css animations
-			        slider.slides.eq(slider.currentSlide).delay(500);
+	// 		        // delay slide fadeOut to show the css animations
+	// 		        slider.slides.eq(slider.currentSlide).delay(500);
 
-			        // delay slide fadeIn until the animations on the prev slide are over
-			        slider.slides.eq(slider.animatingTo).delay(2000);
+	// 		        // delay slide fadeIn until the animations on the prev slide are over
+	// 		        slider.slides.eq(slider.animatingTo).delay(2000);
 
-			}
-		});
+	// 		}
+	// 	});
 	}, 1000);
 		//
 		setTimeout(function(){
@@ -319,29 +319,29 @@ app.flexSliding = function(){
 
 		setTimeout(function(){
 			$('.aboutHolder .rollover, .aboutHolder .rolloverTitle').addClass('display-show');
-		//
-		$('.aboutHolder').removeClass('invisible');
-			//
-			$('.flexslider-about').flexslider({
-				animation: "fade", 
-				controlNav: false,   
-				directionNav: false, 
-				slideshowSpeed: 9000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
-				animationSpeed: 1500,
-				pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-				pauseOnHover: false,
-				easing: "swing",
-				pausePlay: false,
-				before: function(slider) {
-				        // TODO: check if the browser supports css animations before delaying the slides
+		// //
+			$('.aboutHolder').removeClass('invisible');
+		// 	//
+		// 	$('.flexslider-about').flexslider({
+		// 		animation: "fade", 
+		// 		controlNav: false,   
+		// 		directionNav: false, 
+		// 		slideshowSpeed: 9000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+		// 		animationSpeed: 1500,
+		// 		pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+		// 		pauseOnHover: false,
+		// 		easing: "swing",
+		// 		pausePlay: false,
+		// 		before: function(slider) {
+		// 		        // TODO: check if the browser supports css animations before delaying the slides
 
-				        // delay slide fadeOut to show the css animations
-				        slider.slides.eq(slider.currentSlide).delay(500);
+		// 		        // delay slide fadeOut to show the css animations
+		// 		        slider.slides.eq(slider.currentSlide).delay(500);
 
-				        // delay slide fadeIn until the animations on the prev slide are over
-				        slider.slides.eq(slider.animatingTo).delay(2000);
-				}
-			});
+		// 		        // delay slide fadeIn until the animations on the prev slide are over
+		// 		        slider.slides.eq(slider.animatingTo).delay(2000);
+		// 		}
+		// 	});
 		}, 4000);
 }
 //
@@ -358,17 +358,17 @@ app.flexBtns = function(){
 		$('.panelBtn').mouseover(function(){
 			clearTimeout(app.btnStartChecker);
 			clearTimeout(app.panel1);
-			clearTimeout(app.panel2);
+			// clearTimeout(app.panel2);
 			clearTimeout(app.panel3);
 			clearTimeout(app.panel4);
-			clearTimeout(app.panel5);
+			// clearTimeout(app.panel5);
 			if( btnBool === false ){
 				app.btnStopChecker = setTimeout(function(){
 					$('.flexslider-showcase1').flexslider('pause');
-					$('.flexslider-process').flexslider('pause');
+					// $('.flexslider-process').flexslider('pause');
 					$('.flexslider-showcase2').flexslider('pause');
 					$('.flexslider-showcase3').flexslider('pause');
-					$('.flexslider-about').flexslider('pause');
+					// $('.flexslider-about').flexslider('pause');
 					console.log('pause all');
 					btnBool = true;
 					// app.clearTimeouts();
@@ -387,25 +387,25 @@ app.flexBtns = function(){
 				$('.flexslider-showcase1').flexslider('play');
 				},600);
 				// //
-				app.panel2 = setTimeout(function(){
-					$('.flexslider-process').flexslider('next');
-					$('.flexslider-process').flexslider('play');
-				},2000);
+				// app.panel2 = setTimeout(function(){
+				// 	$('.flexslider-process').flexslider('next');
+				// 	$('.flexslider-process').flexslider('play');
+				// },2000);
 				// //
 				app.panel3 = setTimeout(function(){
 					$('.flexslider-showcase2').flexslider('next');
 					$('.flexslider-showcase2').flexslider('play');
-				},3000);
+				},2000);
 				// //
 				app.panel4 = setTimeout(function(){
 					$('.flexslider-showcase3').flexslider('next');
 					$('.flexslider-showcase3').flexslider('play');
-				},4000);
+				},3000);
 				// //
-				app.panel5 = setTimeout(function(){
-					$('.flexslider-about').flexslider('next');
-					$('.flexslider-about').flexslider('play');
-				},5000);
+				// app.panel5 = setTimeout(function(){
+				// 	$('.flexslider-about').flexslider('next');
+				// 	$('.flexslider-about').flexslider('play');
+				// },5000);
 				
 				btnBool = false;
 				console.log('play all');

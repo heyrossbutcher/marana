@@ -62,6 +62,8 @@ get_header();  ?>
               echo '</a>';
           ?>
           <?php wp_reset_postdata(); ?>
+
+          
           
     <?php endwhile; // end of the loop. ?>
 

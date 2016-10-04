@@ -22,9 +22,9 @@
           //
           // 
           if ( $row_kind == 'full_width_image' ) {
+            // pre_r($home_info);
             // 
-            $image = $home_info[$row_kind][0]['image']['sizes']['large'];
-            // pre_r($image);
+            $image = $home_info[$row_kind][0]['image']['url'];
             echo '<div class="full_width_image">';
             echo '<div class="innerKey" style="background-image: url('.$image.')"></div>';
             echo '</div>';
@@ -46,16 +46,16 @@
             // $title = $home_info[$row_kind][0]['title'];
             $copy = $home_info[$row_kind][0]['copy'];
             $image = $home_info[$row_kind][0]['image_choice'][0]['image']['sizes']['large'];
-            // pre_r($title);
-            echo '<div class="image_and_copy clearfix">';
-            echo '<div class="image" style="background-image:url('.$image.')"></div>';
+            // pre_r($row_kind);
+            echo '<div class="copy_and_image clearfix">';
             echo '<div class="copy">'.$copy.'</div>';
+            echo '<div class="image" style="background-image:url('.$image.')"></div>';
             echo '</div>';
           } else if ( $row_kind == 'image_and_copy' ) {
             // $title = $home_info[$row_kind][0]['title'];
             $copy = $home_info[$row_kind][0]['copy'];
             $image = $home_info[$row_kind][0]['image_choice'][0]['image']['sizes']['large'];
-            // pre_r($title);
+            // pre_r($row_kind);
             echo '<div class="image_and_copy clearfix">';
             echo '<div class="image" style="background-image:url('.$image.')"></div>';
             echo '<div class="copy">'.$copy.'</div>';
@@ -64,6 +64,13 @@
           }
         } 
       ?>
+
+      <?php 
+        the_post_navigation( array(
+          'next_text' => '<span class="post-title">%title</span>',
+          'prev_text' => '<span class="post-title">%title</span>',
+        ) );
+       ?>
 
       <?php endwhile; // end of the loop. ?>
 

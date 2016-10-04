@@ -79,12 +79,6 @@ get_header();  ?>
               
               
           <?php endwhile; // end of the loop. ?>
-
-      <div class="consultationFooter">
-      	<div class="consultation">
-      	  <p>Book Consultation</p>
-      	</div>
-      </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

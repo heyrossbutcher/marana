@@ -59,6 +59,7 @@ get_header();  ?>
                          $title = $info['copy_and_image'][0]['title'];
                          $copy = $info['copy_and_image'][0]['copy'];
                          $image = $info['copy_and_image'][0]['image']['url'];
+
                            echo '<div class="copy_and_image clearfix">';
                            echo '<div class="copy">';
                            echo '<div class="aboutTitle3">'.$title.'</div>';
@@ -67,8 +68,7 @@ get_header();  ?>
                            echo '<div class="image" style="background-image:url('.$image.')"></div>';
                            echo '</div>';
                     } else if ( $row_kind == 'image_and_copy' ) {
-                         // pre_r($info);
-                         $copy = $info['image_and_copy'][0]['title'];
+                         $title = $info['image_and_copy'][0]['title'];
                          $copy = $info['image_and_copy'][0]['copy'];
                          $image = $info['image_and_copy'][0]['image']['url'];
                          echo '<div class="image_and_copy clearfix">';
@@ -87,11 +87,7 @@ get_header();  ?>
               
               
           <?php endwhile; // end of the loop. ?>
-     <div class="consultationFooter">
-          <div class="consultation">
-            <p>Book Consultation</p>
-          </div>
-     </div>
+  
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
