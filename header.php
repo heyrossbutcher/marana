@@ -10,7 +10,9 @@
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <link href="https://fonts.googleapis.com/css?family=Taviraj:300,400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <script src="https://use.fontawesome.com/d95a83ce12.js"></script>
+
 
   <?php wp_head(); ?>
 </head>
@@ -30,7 +32,7 @@
     </h1>
     
 
-    <?php if( is_front_page() || is_page('process') || is_page('about') || is_page('contact') || is_page('stories')  ): ?>
+    <?php if( !is_page(array('kitchen', 'bathroom', 'living-room','bedroom', 'walk-in-closets', 'libraries', 'powder-rooms', 'wine-rooms', 'portfolio')) ): ?>
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'
@@ -47,7 +49,7 @@
 
     <div class="consultation">
       <p>Book Consultation</p>
-    <div class="socialBtns">
+    <!-- <div class="socialBtns">
       <ul>
         <li>
           <a href=""><i class="fa fa-facebook" aria-hidden="true"></a></i>
@@ -59,7 +61,7 @@
           <a href=""><i class="fa fa-houzz" aria-hidden="true"></i></a></i>
         </li>
       </ul>
-    </div>
+    </div> -->
     </div>
   </div>
   <!--  -->
@@ -99,7 +101,7 @@
       </ul>
     </div>
     <div class="consult"><p>Book a consultation</p></div>
-    <div class="social">
+    <!-- <div class="social">
       <ul>
         <li>
           <a href=""><i class="fa fa-facebook" aria-hidden="true"></a></i>
@@ -111,7 +113,7 @@
           <a href=""><i class="fa fa-houzz" aria-hidden="true"></i></a></i>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
   <!--  -->
   </div>

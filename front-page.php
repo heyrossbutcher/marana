@@ -20,6 +20,7 @@ get_header();  ?>
             
 
             <?php $home_showcase = get_field('showcase');  ?>
+            <?php $home_slug = get_field('slug_line');  ?>
             <?php $home_order = get_field('home_page_order');  ?>
             <?php $homes_info = get_field('create_a_row');  ?>
             <?php $id = get_the_ID(); ?>
@@ -34,7 +35,14 @@ get_header();  ?>
                     echo '<a href="'.$link.'">';
                     echo '<div class="showcase01 showcase flexslider-showcase1 panelBtn invisible">';
                     echo '<div class="rollover">';
-                    echo '<div class="rolloverTitle"><div class="rolloverP">'.$page_title.'</div></div>';
+                    echo '<div class="rolloverTitle">';
+                        echo '<div class="rolloverH">';
+                            echo '<h4>'.$page_title.'</h4>';
+                        echo '</div>';
+                        echo '<div class="rolloverP">';
+                            echo '<p>'.$home_slug.'</p>';
+                        echo '</div>';
+                        echo '</div>';
                     echo '</div>';
                     echo '<ul class="slides">';
                     $oneCounter = 0;
@@ -66,34 +74,45 @@ get_header();  ?>
         <div class="col2">
             <!--  -->
             <?php $latestPosts = new wp_query(array(
-                'post_type' => 'info',//we only want home pieces
+                'post_type' => 'panels',//we only want home pieces
                 'posts_per_page' => -1
               )) ?> 
             <?php // Start the loop ?>
             <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
-                <?php $process_items = get_field('process_item');  ?>
-                <?php $process_id = get_the_id();  ?>
-                <?php $process_title = get_the_title($process_id);  ?>
-                <?php $process_title_lc =  strtolower($process_title);  ?>
-                <?php $process_link =  get_bloginfo( 'url' ).'/'.$process_title_lc;  ?>
-                <?php $home_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" ); ?>
-
+                <?php $panel_cat = get_field('panel_id');  ?>
+                
                 <?php 
-                    if( $process_title == 'Process' ){
-                        echo '<a href="'.$process_link.'">';
-                        echo '<div class="process processHolder panelBtn invisible"  style="background-image: url('.$home_thumbnail[0].')">';
+                    if( $panel_cat == 'process' ){
+
+                        $panel_id = get_the_id(); 
+                        $panel_title = get_the_title($panel_id); 
+                        $panel_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" );
+                        $panel_link = get_field('url');
+                        $panel_image = get_field('panels');
+                        $panel_image_select = $panel_image[0]['panel_image']['url'];
+                        
+                        //
+                        echo '<a href="'.$panel_link.'">';
+                        echo '<div class="process processHolder panelBtn invisible"  style="background-image: url('.$panel_image_select.')">';
                         echo '<div class="rollover">';
-                        echo '<div class="rolloverTitle"><div class="rolloverP">'.$process_title.'</div></div>';
+                        echo '<div class="rolloverTitle">';
+                            echo '<div class="rolloverH">';
+                                echo '<h4>'.$panel_title.'</h4>';
+                            echo '</div>';
+                        echo '</div>';
                         echo '</div>';
                         echo '<div class="preloader"></div>';
                         // echo '</div>';
                         echo '</div>';
                         echo '</a>';
-                    }
 
-                 ?>
+                    }
+                ?>
+
                 <?php wp_reset_postdata(); ?>
+
             <?php endwhile; // end of the loop. ?>
+
             <!--  -->
             <?php $latestPosts = new wp_query(array(
                 'post_type' => 'homes',//we only want home pieces
@@ -104,6 +123,7 @@ get_header();  ?>
             <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
 
                 <?php $home_showcase = get_field('showcase');  ?>
+                <?php $home_slug = get_field('slug_line');  ?>
                 <?php $home_order = get_field('home_page_order');  ?>
                 <?php $homes_info = get_field('create_a_row');  ?>
                 <?php $id = get_the_ID(); ?>
@@ -116,7 +136,14 @@ get_header();  ?>
                         echo '<a href="'.$link.'">';
                         echo '<div class="showcase02 showcase flexslider-showcase2 panelBtn invisible">';
                         echo '<div class="rollover">';
-                        echo '<div class="rolloverTitle"><div class="rolloverP">'.$page_title.'</div></div>';
+                        echo '<div class="rolloverTitle">';
+                            echo '<div class="rolloverH">';
+                                echo '<h4>'.$page_title.'</h4>';
+                            echo '</div>';
+                            echo '<div class="rolloverP">';
+                                echo '<p>'.$home_slug.'</p>';
+                            echo '</div>';
+                            echo '</div>';
                         echo '</div>';
                         echo '<ul class="slides">';
                         $twoCounter = 0;
@@ -147,34 +174,42 @@ get_header();  ?>
             <!--  -->
             <!--  -->
             <?php $latestPosts = new wp_query(array(
-                'post_type' => 'info',//we only want home pieces
+                'post_type' => 'panels',//
                 'posts_per_page' => -1
               )) ?> 
-            <?php // Start the loop ?>
-            <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
-                <?php $about_items = get_field('info');  ?>
-                <?php $about_id = get_the_ID();  ?>
-                <?php $about_title = get_the_title($about_id);  ?>
-                <?php $about_title_lc =  strtolower($about_title);  ?>
-                <?php $about_link =  get_bloginfo( 'url' ).'/'.$about_title_lc;  ?>
-                <?php $home_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" ); ?>
 
+
+            <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
                 <?php 
-                    if( $about_title == 'About' ){
-                        echo '<a href="'.$about_link.'">';
+                    $panel_cat = get_field('panel_id');  
+                    if( $panel_cat == 'about' ){
+                        //
+                        $panel_id = get_the_id(); 
+                        $panel_title = get_the_title($panel_id); 
+                        $panel_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" );
+                        $panel_link = get_field('url');
+                        $panel_image = get_field('panels');
+                        $panel_image_select = $panel_image[0]['panel_image']['url'];
+                        // pre_r($panel_image_select);
+                        //
+                        echo '<a href="'.$panel_link.'">';
                         echo '<div class="about aboutHolder flexslider-about panelBtn invisible" >';
-                        echo '<div class="aboutInnerHolder"  style="background-image: url('.$home_thumbnail[0].')">';
+                        echo '<div class="aboutInnerHolder"  style="background-image: url('.$panel_image_select.')">';
                         echo '<div class="rollover">';
-                        echo '<div class="rolloverTitle"><div class="rolloverP">'.$about_title.'</div></div>';
+                        echo '<div class="rolloverTitle">';
+                            echo '<div class="rolloverH">';
+                                echo '<h4>'.$panel_title.'</h4>';
+                            echo '</div>';
                         echo '</div>';
-                    
+                        echo '</div>';
+                        
                         echo '<div class="preloader"></div>';
                         echo '</div>';
                         echo '</div>';
                         echo '</a>';
                     }
+                ?>
 
-                 ?>
                 <?php wp_reset_postdata(); ?>
             <?php endwhile; // end of the loop. ?>
             <!--  -->
@@ -189,6 +224,7 @@ get_header();  ?>
             <?php if($latestPosts->have_posts()) while($latestPosts->have_posts()) : $latestPosts->the_post() ?>
 
                 <?php $home_showcase = get_field('showcase');  ?>
+                <?php $home_slug = get_field('slug_line');  ?>
                 <?php $home_order = get_field('home_page_order');  ?>
                 <?php $homes_info = get_field('create_a_row');  ?>
                 <?php $id = get_the_ID(); ?>
@@ -201,7 +237,14 @@ get_header();  ?>
                         echo '<a href="'.$link.'">';
                         echo '<div class="showcase03 showcase flexslider-showcase3 panelBtn invisible">';
                         echo '<div class="rollover">';
-                        echo '<div class="rolloverTitle"><div class="rolloverP">'.$page_title.'</div></div>';
+                        echo '<div class="rolloverTitle">';
+                            echo '<div class="rolloverH">';
+                                echo '<h4>'.$page_title.'</h4>';
+                            echo '</div>';
+                            echo '<div class="rolloverP">';
+                                echo '<p>'.$home_slug.'</p>';
+                            echo '</div>';
+                            echo '</div>';
                         echo '</div>';
                         echo '<ul class="slides">';
                         $threeCounter = 0;
@@ -248,6 +291,7 @@ get_header();  ?>
         <?php $url = get_post_permalink($id); ?>
 
         <?php $home_showcase = get_field('showcase');  ?>
+        <?php $home_slug = get_field('slug_line');  ?>
         <?php $home_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" ); ?>
         <?php $home_thumbnail = $home_thumbnail[0]; ?>
        
@@ -258,8 +302,9 @@ get_header();  ?>
             echo '<a href="'.$url.'">';
             echo '<div class="mobileShowcaseHolder" style="background-image: url('.$home_thumbnail.')">';
             echo '<div class="titleOverlay">';
-            echo '<p>'.$home_title.'</p>';
-            echo '<p class="cta">Learn more</p>';
+            echo '<div class="rolloverH"><p>'.$home_title.'</p></div>';
+            echo '<div class="rolloverP"><p>'.$home_slug.'</p></div>';
+            echo '<div class="cta">Learn more</div>';
             echo '</div>';
             echo '</div>';
             echo '</a>';

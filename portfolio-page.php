@@ -17,7 +17,7 @@ get_header();  ?>
   	<?php $latestPosts = new wp_query(array(
   	    'post_type' => 'rooms',//we only want home pieces
   	    'posts_per_page' => -1,	
-  	    'orderby'=> 'title', 
+  	    // 'orderby'=> 'title', 
   	    'order' => 'ASC'
   	  )) ?> 
     <?php // Start the loop ?>

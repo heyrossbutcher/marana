@@ -12,6 +12,7 @@ $douce: cubic-bezier(.5,.5,.5,1);
 $dark: #2a2420;
 $brown: #292421;
 $white: #fff;
+$offwhite: #f7f7f5;
 $green: #848c5e;
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
@@ -149,7 +150,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: none;
+  // max-height: 100%;
   height: auto; }
 
 /* ;;;Global Classes / Wordpress Specific */
@@ -191,7 +193,8 @@ html,body {
   position: static;
   padding: 80px 0 100px;
   text-align: center;
-  background: $brown;
+  background: #f7f7f7;
+  border-top: 1px solid rgba(gray, .15);
   h2{
     display: none;
   }
@@ -201,16 +204,16 @@ html,body {
     //
     a{
       font-size: 1.4vw;
-      color: white;
-      border: 1px solid $white;
+      color: rgba($brown, .75);
+      border: 1px solid rgba($brown, .1);
       border-radius: 4px;
       padding: 10px 25px;
       cursor: pointer;
-      background: $brown;
+      background: rgba($white, .8);
       transition: all .5s ease;
       &:hover{
-        background: $white;
-        color: $brown;
+        background: rgba($brown, .75);
+        color: rgba($white, .8);
       }
     }
   }
@@ -218,9 +221,9 @@ html,body {
     float: right;
     a{
       &::after { 
-          content: "\f054"; 
-          font-family: FontAwesome;
-          font-weight: light;
+          content: ">"; 
+        font-family: 'Quicksand', sans-serif;
+          font-weight: 300;
           padding-left: 15px;
       }
     }
@@ -228,9 +231,9 @@ html,body {
   .nav-previous{
     a{
       &::before { 
-          content: "\f053"; 
-          font-family: FontAwesome;
-          font-weight: light;
+          content: "<"; 
+          font-family: 'Quicksand', sans-serif;
+          font-weight: 300;
           padding-right: 15px;
       }
     }
@@ -392,7 +395,9 @@ body.single-post {
   // height: 100vh;
   margin: 0 auto;
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+  font-size: 1.5rem;
+   }
 
 header{
   // background: #2a2420;
@@ -413,6 +418,7 @@ header{
   .nav-wrapper{
     // background: #ffffff;
     background: #f7f7f5;
+    // background:transparent url('http://localhost:8888/078-Marana/Production/wp-content/themes/heyross/img/plaster05.jpg') left top no-repeat;
     height: 100%;
     min-height: 600px;
     max-height: 100vh;
@@ -423,7 +429,7 @@ header{
       text-align: center;
       p{
         font-family: 'Taviraj', serif;
-        font-size: 1vw;
+        font-size: 1.15vw;
         font-weight: 300;
         text-align: center;
         // width: 67%;
@@ -613,10 +619,14 @@ ul.menu li a {
     display: none;
   }
   ////////  HOME GALLERY  ////////////
+  .home{
+    overflow: hidden;
+    height: 100vh;
+  }
   .homeGallery{
     font-family: 'Taviraj', serif;
     font-weight: 300;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       div:last-of-type{
         // margin-bottom: 40px;
       }
@@ -735,7 +745,7 @@ ul.menu li a {
       column-gap: 30px;
       p{
         margin: 0;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
       }
     }
     .image_with_copy_overtop{
@@ -764,7 +774,8 @@ ul.menu li a {
           }
           p{
             margin: 0;
-            font-size: 1.15rem;
+            font-size: 1.5rem;
+            font-weight: 300;
           }
       }
       .darken{
@@ -788,7 +799,8 @@ ul.menu li a {
       display: flex;
       .copy{
         margin: 50px 0;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
+        font-weight: 300;
         float: left;
         width: 40%;
         padding-right: 40px;
@@ -817,15 +829,16 @@ ul.menu li a {
       }
     }
     .image_and_copy{
-      margin: 100px 0 90px 10%;
+      margin: 100px 0 90px 0;
       display: flex;
       .copy{
 
         margin: 0;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
+        font-weight: 300;
         float: left;
-        width: 50%;
-        padding-right: 40px;
+        width: 40%;
+        padding-right: 15px;
         .aboutTitle3{
           font-size: 1.6vw;
           font-weight: 400;
@@ -839,7 +852,7 @@ ul.menu li a {
       }
       .image{
         float: right;
-        width: 36%;
+        width: 42%;
         margin-right: 10%;
         background-size: cover;
         background-position: right center;
@@ -884,7 +897,7 @@ ul.menu li a {
             // position: absolute;
             // top:50%;
             // transform: translateY(-50%);
-            width: 40%;
+            width: 50%;
             padding: 100px 50px;
             h3{
               font-size: 3rem;
@@ -896,8 +909,9 @@ ul.menu li a {
               margin-bottom: 30px;
             }
             p{
-              font-size: 1.15rem;
+              font-size: 1.5rem;
               font-family: 'Taviraj', serif;
+              font-weight: 300;
               margin: 0;
               padding: 0;
               margin-bottom: 15px;
@@ -919,18 +933,18 @@ ul.menu li a {
           // padding-left: 20px;
           // padding-right: 100px;
           // margin-left: 20%;
-          margin: 0 10%;
+          margin: 0 5%;
         }
         .process_copy_left{
           // padding-left: 10%;
           // padding-right: 20px;
-          margin: 0 10%;
+          margin: 0 5%;
           
           
         }
         .process_image_left{
             float: left;
-            width: 40%;
+            width: 50%;
             align:stretch;
             background-size: cover;
             background-position: right center;
@@ -938,7 +952,7 @@ ul.menu li a {
         }
         .process_image_right{
             float: right;
-            width: 40%;
+            width: 50%;
             text-align: right;
             align:stretch;
             background-size: cover;
@@ -1181,32 +1195,62 @@ ul.menu li a {
   }
   //
   .rollover{
-    display: none;
+    // display: none;
+    overflow: hidden;
     position: absolute;
     top:0;
     width: 100%;
     height: 100%;
-    background: rgba($brown, .85);
     z-index: 2000;
-    opacity: 0;
     transition: opacity .5s $douce;
-    
+    &:hover .rolloverTitle{
+      transform: translate(0, -50%);
+    }
   }
   .rolloverTitle{
-    display: none;
+    display: inline-block;
     font-family: 'Taviraj', serif;
     position: absolute;
-    top:0;
+    top:50%;
+    transform: translate(-100%, -50%);
     width: 100%;
+    // height: 100%;
     color: $white;
     z-index: 2001;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .5s $douce;
+    text-align: left;
+    // background: rgba($brown, .85);
+    opacity: 1;
+    transition: transform .65s $douce;
     .rolloverP{
+      // position: absolute;
+      // top:50%;
+      // transform:translateY(-50%);
       font-weight: 300;
-      // margin: 0;
+      line-height: 1;
+      margin: 0;
+      p{
+        font-size: 1.25vw;
+        font-weight: 300;
+        margin: 0;
+        // padding: 0;
+        padding: 5px 15px;  
+        color: $offwhite;
+        background: $brown; 
+        display: inline-block;     
+      }
     }
+    .rolloverH{
+        h4{
+          
+          font-weight: 300;
+          margin: 0;
+          // padding: 0;
+          padding: 10px 25px 10px 15px;
+          color: $brown;
+          background: $offwhite;
+          display: inline-block;
+        }
+      }
     .rolloverIcon{
       width: 5vh;
       height: 5vh;
@@ -1219,19 +1263,22 @@ ul.menu li a {
       width: 100%;
     }
   }
-  .slides{
-    width: 100%;
-    height: 100%;
-    // transition-delay: 0.5s;
-    // -webkit-transition-delay: 0.5s;
-    li{
+  // .home{
+    .slides{
       width: 100%;
       height: 100%;
-      opacity: 0;
-      // transition: opacity 3s ease; 
-      background-size: cover;
+      // transition-delay: 0.5s;
+      // -webkit-transition-delay: 0.5s;
+      li{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        // transition: opacity 3s ease; 
+        background-size: cover;
+      }
     }
-  }
+    
+  // }
   @keyframes showAndHide{
     0% { opacity: 0!important; display: block!important; };
     15% { opacity: .5!important; };
@@ -1257,18 +1304,24 @@ ul.menu li a {
       transition: opacity 1s ease;
       .rolloverTitle{
         position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
+        // top: 50%;
+        // left:50%;
+        // transform: translate(-50%, -50%);
         .rolloverIcon{
           width: 6vw;
           height: 4.5vw;
         }
         .rolloverP{
-          font-size: 2.25vw;
-          line-height: 2.25vw;
-          margin-top: 10px;
-          // margin-top: 15px;
+          line-height: 1;
+          margin: 0;
+          p{
+               font-size: 1.25vw;    
+          }
+        }
+        .rolloverH{
+          h4{
+            font-size: 2vw;
+          }
         }
       }
       &:hover .rollover{
@@ -1300,6 +1353,7 @@ ul.menu li a {
     //
     .processHolder{
       position: relative;
+      background-size: cover;
       height: 40vh;
       margin-bottom: 2vh;
       color: pink;
@@ -1312,12 +1366,21 @@ ul.menu li a {
       }
       .rolloverTitle{
         position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
+        // top: 50%;
+        // left:50%;
+        // transform: translate(-50%, -50%);
         .rolloverP{
-          font-size: 2.65vw;
-        }      
+          line-height: 1;
+          margin: 0;
+          p{
+              font-size: 1.25vw;     
+          }
+        }  
+        .rolloverH{
+          h4{
+            font-size: 2vw;
+          }
+        }    
       }
     .process{
       width: 100%;
@@ -1339,17 +1402,24 @@ ul.menu li a {
       transition: opacity 1s ease;
       .rolloverTitle{
         position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
+        // top: 50%;
+        // left:50%;
+        // transform: translate(-50%, -50%);
         .rolloverIcon{
           width: 5vw;
           height: 3.75vw;
         }
         .rolloverP{
-          font-size: 2vw;
-          line-height: 2vw;
-          margin-top: 10px;
+          line-height: 1;
+          margin: 0;
+          p{
+             font-size: 1vw;    
+          }
+        }
+        .rolloverH{
+          h4{
+            font-size: 1.6vw;
+          }
         }
       }
       &:hover .rollover{
@@ -1411,11 +1481,20 @@ ul.menu li a {
           }
           .rolloverTitle{
             position: absolute;
-            top: 50%;
-            left:50%;
-            transform: translate(-50%, -50%);
+            // top: 50%;
+            // left:50%;
+            // transform: translate(-50%, -50%);
             .rolloverP{
-              font-size: 2.75vw;
+              line-height: 1;
+              margin: 0;
+              p{
+                font-size: .9vw;       
+              }
+            }
+            .rolloverH{
+              h4{
+                font-size: 2vw;
+              }
             }
           }   
       }
@@ -1430,17 +1509,24 @@ ul.menu li a {
       transition: opacity 1s ease;
       .rolloverTitle{
         position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
+        // top: 50%;
+        // left:50%;
+        // transform: translate(-50%, -50%);
         .rolloverIcon{
           width: 4vw;
           height: 3vw;
         }
         .rolloverP{
-          font-size: 1.75vw;
-          line-height: 1.75vw;
-          margin-top: 10px;
+          line-height: 1;
+          margin: 0;
+          p{
+                 font-size: .9vw;  
+          }
+        }
+        .rolloverH{
+          h4{
+            font-size: 1.4vw;
+          }
         }
       }
       &:hover .rollover{
@@ -1472,7 +1558,12 @@ ul.menu li a {
     background-position: center center;
     height: 100vh;
     //
-    
+
+            // .map01, .map02 {
+            //   position: relative;
+            //   height: 100vh;
+            //   z-index: 1000;
+            // }
     //
     .locations{
       width: 90%;
@@ -1551,7 +1642,8 @@ ul.menu li a {
           p{
             margin: 0;
             padding: 0;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-weight: 300;
             text-align: justify;
           }
         }
@@ -1768,6 +1860,9 @@ ul.menu li a {
   }
   .display-show{
     display: block!important;
+  }
+  .title-move{
+    transform: translate(-100%, -50%)!important;
   }
   
   .map-tab-opacity{
@@ -2081,6 +2176,39 @@ nav {
       /* ====================================================================================================================
        * RESETS
        * ====================================================================================================================*/
+      .flexslider-rooms{
+        .hold-up{
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .spinner{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center center;
+            // border:1px solid $brown;
+            // border-radius: 50%;
+            svg{
+            transform-origin: center center;
+              fill:none;
+              stroke:$green;
+              stroke-width: 8px;
+              stroke-dashoffset: 0;
+              stroke-dasharray: 480;
+              animation: rotate 2s both infinite linear; 
+            }
+            
+          }
+
+        }
+      }
+      @keyframes rotate{
+        0%{ transform: rotate(0deg) }
+        100%{ transform: rotate(360deg) }
+      }
       .flex-container a:hover,
       .flex-slider a:hover {
         outline: none;
@@ -2147,6 +2275,7 @@ nav {
       }
       .flexslider .slides {
         zoom: 1;
+        // max-height: 400px;
       }
       .flexslider .slides img {
         height: auto;
@@ -2192,16 +2321,16 @@ nav {
         transition: all 0.3s ease-in-out;
       }
       .flex-direction-nav a:before {
-        font-family: "flexslider-icon";
+        font-family: 'Quicksand', sans-serif;
         font-size: 40px;
         display: inline-block;
-        content: '\f001';
+        content: '<';
         color: #848c5e;
         text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
       }
 
       .flex-direction-nav a.flex-next:before {
-        content: '\f002';
+        content: '>';
       }
 
       .flex-direction-nav .flex-prev {

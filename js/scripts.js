@@ -38,7 +38,7 @@ function initMap(_latLng,_map,_loc) {
 	//
 	google.maps.event.addDomListener(window, 'resize', function() {
 	    // map.setCenter(center);
-	    console.log('center');
+	    // console.log('center');
       window.setTimeout(function() {
         map.panTo(marker.getPosition());
       }, 500);
@@ -141,7 +141,7 @@ app.overlayOn = false;
 //
 
 $('.flexslider-rooms').flexslider({
-	controlNav: true,               
+	controlNav: false,               
 	keyboard: true,
 	smoothHeight: true,
 	useCSS: true, 

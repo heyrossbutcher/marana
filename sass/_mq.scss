@@ -1,136 +1,16 @@
 // _mq.scss
-@media screen and (min-width: 1400px) {
-	h1 {
-	    // margin: 0;
-	    padding: 23% 22.5% 25% 22.5%;
-	    // font-size: 2em;
-	}
+//////////////////////////////////////
+//////////////////////////////////////
+//////////////////////////////////////
+@media screen and (min-width: 1800px) {
 	//
 	ul.menu {
-	  font-size: 1.1vw;
-	  margin: 0 22.5%;
-	}
-
-  .sub-menu{
-    font-size: .7vw;
-  }
-
-  header .nav-wrapper .consultation p {
-      font-size: .75vw;
-      margin: 0 20%;
-  }
-	//
-	header .nav-wrapper .socialBtns ul li a {
-	    font-size: 1.25vw;
+	  font-size: .9vw!important;
 	}
 	//
-	.contact .locations .topRow p {
-	    margin: 0;
-	    padding: 0;
-	    font-size: 1.25rem;
+	header .nav-wrapper .consultation p {
+	    font-size: .8vw!important;
 	}
-	//
-	.homeGallery .full_width_image{
-		height: 50vh;
-		.innerKey {
-		    transform: scale(1.45);
-		}
-	}
-	.homeGallery .two_column_copy, .homeGallery .image_with_margin, .homeGallery .image_and_copy, .homeGallery .copy_and_image {
-	  width: 60%;
-	  margin: 0 20% 100px;
-	}
-	.homeGallery .showcaseTitle{
-		width: 60%;
-		margin: 0 20% 40px;
-	}
-	.homeGallery .full_width_image {
-	    margin-bottom: 100px;
-	}
-	////////////////
-	.portfolio .port_home .port_home_name h3 {
-	    font-size: 2rem;
-	}
-	.process .process_block .process_collect .process_copy_right, .process .process_block .process_collect .process_copy_left {
-	    // width: 100%;
-		width: 45%;
-	    margin: 100px 7.5%;
-	    h3 {
-	        font-size: 4rem;
-	    }
-	    p{
-	    font-size: 1.3rem; 
-	    }
-	}
-	.process .process_block .process_key {
-	    height: 50vh;
-	    .innerKey {
-	        transform: scale(1.6);
-	    }
-	}
-	////////////////
-	.about .full_width_image {
-	    height: 50vh;
-	}
-	.about .image_with_copy_overtop .copyBlock .aboutTitle2 {
-	    font-size: 4rem;
-	}
-	.about .aboutTitle {
-	    width: 60%;
-	    margin: 100px 20% 40px;
-	}
-	.about .two_column_copy {
-	    width: 60%;
-	    margin: 0 20% 100px;
-	    p{
-	    	font-size: 1.5rem;
-	    }
-	}
-	.about .image_with_copy_overtop{
-	    height: 50vh;
-		.copyBlock {
-		    width: 20vw;
-	        margin: 0 0 0 20%;
-		    p{
-		    	font-size: 1.5rem;
-		    }
-		}
-	}
-	.about .copy_and_image {
-	    margin: 50px 0 100px 20%;
-	    .copy{
-	        margin: 100px 0;
-	    	width: 40%;
-	    	p{
-	    		font-size: 1.5rem;
-	    	}
-	    }
-
-	    .image{
-	    	width: 55%;
-	    	margin-left: 15%;
-	    }
-	}
-	.about .image_and_copy {
-	    .copy{
-	        margin: 100px 0 0;
-	    	width: 30%;
-	    	p{
-	    		font-size: 1.5rem;
-	    	}
-	    }
-	    .image{
-	    	margin-right: 10%;
-	    }
-	}
-	////////////////
-	.consultationFooter .consultation p {
-	    font-size: 1.3vw;
-	    padding: 7.5px 37.5px;
-	    cursor: pointer;
-	    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
-	}
-	////////////////
 }
 //////////////////////////////////////
 //////////////////////////////////////
@@ -152,7 +32,7 @@
   }
 
   header .nav-wrapper .consultation p {
-      font-size: .75vw;
+      font-size: 1vw;
       margin: 0 20%;
   }
 	//
@@ -269,10 +149,151 @@
 	////////////////
 
 }
+
+@media screen and (min-width: 1400px) {
+	h1 {
+	    // margin: 0;
+	    padding: 23% 22.5% 25% 22.5%;
+	    // font-size: 2em;
+	}
+	//
+	ul.menu {
+	  font-size: 1.1vw;
+	  margin: 0 22.5%;
+	}
+
+  .sub-menu{
+    font-size: .7vw;
+  }
+
+  header .nav-wrapper .consultation p {
+      font-size: 1.15vw;
+      margin: 0 20%;
+  }
+	//
+	header .nav-wrapper .socialBtns ul li a {
+	    font-size: 1.25vw;
+	}
+	//
+	.contact .locations .topRow p {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 1.25rem;
+	}
+	//
+	.homeGallery .full_width_image{
+		height: 50vh;
+		.innerKey {
+		    // transform: scale(1.45);
+		}
+	}
+	.homeGallery .two_column_copy, .homeGallery .image_with_margin, .homeGallery .image_and_copy, .homeGallery .copy_and_image {
+	  width: 60%;
+	  margin: 0 20% 100px;
+	}
+	.homeGallery .showcaseTitle{
+		width: 60%;
+		margin: 0 20% 40px;
+	}
+	.homeGallery .full_width_image {
+	    margin-bottom: 100px;
+	}
+	////////////////
+	.portfolio .port_home .port_home_name h3 {
+	    font-size: 2rem;
+	}
+	.process .process_block .process_collect .process_copy_right, .process .process_block .process_collect .process_copy_left {
+	    // width: 100%;
+		width: 45%;
+	    margin: 100px 7.5%;
+	    h3 {
+	        font-size: 4rem;
+	    }
+	    p{
+	    font-size: 1.3rem; 
+	    }
+	}
+	.process .process_block .process_key {
+	    height: 50vh;
+	    .innerKey {
+	        transform: scale(1.6);
+	    }
+	}
+	////////////////
+	.about .full_width_image {
+	    height: 50vh;
+	}
+	.about .image_with_copy_overtop .copyBlock .aboutTitle2 {
+	    font-size: 4rem;
+	}
+	.about .aboutTitle {
+	    width: 60%;
+	    margin: 100px 20% 40px;
+	}
+	.about .two_column_copy {
+	    width: 60%;
+	    margin: 0 20% 100px;
+	    p{
+	    	font-size: 1.5rem;
+	    }
+	}
+	.about .image_with_copy_overtop{
+	    height: 50vh;
+		.copyBlock {
+		    width: 20vw;
+	        margin: 0 0 0 20%;
+		    p{
+		    	font-size: 1.5rem;
+		    }
+		}
+	}
+	.about .copy_and_image {
+	    margin: 50px 0 100px 20%;
+	    .copy{
+	        margin: 100px 0;
+	    	width: 40%;
+	    	p{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+
+	    .image{
+	    	width: 55%;
+	    	margin-left: 15%;
+	    }
+	}
+	.about .image_and_copy {
+	    .copy{
+	        margin: 100px 0 0;
+	    	width: 30%;
+	    	p{
+	    		font-size: 1.5rem;
+	    	}
+	    }
+	    .image{
+	    	margin-right: 10%;
+	    }
+	}
+	////////////////
+	.consultationFooter .consultation p {
+	    font-size: 1.3vw;
+	    padding: 7.5px 37.5px;
+	    cursor: pointer;
+	    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
+	}
+	////////////////
+}
+
 //////////////////////////////////////
 //////////////////////////////////////
 //////////////////////////////////////
 @media screen and (max-width: 1200px) {
+	//
+	header .nav-wrapper .consultation p {
+	    font-size: 1.35vw;
+	    margin: 0 15%;
+	}
+
 	//CONTACT
 	.line01{
 		display: block;
@@ -283,6 +304,16 @@
 		    font-size: 1.2rem;
 	    }
 	}
+
+		.contact .locations .mapRow .contactFormSpace {
+		    padding: 30px;
+	    }
+	    .contact .locations .mapRow .contactFormSpace .contactForm {
+	        padding: 0 40px;
+	    }
+	    .contact .locations .topRow .contactTab {
+	        font-size: 2vw;
+	    }
 
 	//ABOUT
 	.about .image_with_copy_overtop .copyBlock {
@@ -298,15 +329,7 @@
 //////////////////////////////////////
 //////////////////////////////////////
 @media screen and (max-width: 1200px) {
-	.contact .locations .mapRow .contactFormSpace {
-	    padding: 30px;
-    }
-    .contact .locations .mapRow .contactFormSpace .contactForm {
-        padding: 0 40px;
-    }
-    .contact .locations .topRow .contactTab {
-        font-size: 2vw;
-    }
+	
 }
 //////////////////////////////////////
 //////////////////////////////////////
@@ -471,6 +494,35 @@
 	    margin: 0 !important;
 	    margin-bottom: 0 !important;
 	}
+	.col1 .showcase01 .rolloverTitle .rolloverH h4 {
+	    font-size: 2.5vw;
+	}
+	.col1 .showcase01 .rolloverTitle .rolloverP p {
+	    font-size: 1.6vw;
+	}
+	//
+	.col2 .showcase02 .rolloverTitle .rolloverH h4 {
+	    font-size: 1.8vw;
+	}
+	.col2 .showcase02 .rolloverTitle .rolloverP p {
+	    font-size: 1.25vw;
+	}
+	//
+	.col3 .showcase03 .rolloverTitle .rolloverH h4 {
+	    font-size: 1.6vw;
+	}
+	.col3 .showcase03 .rolloverTitle .rolloverP p {
+	    font-size: 1vw;
+	}
+	//
+	.col2 .processHolder .rolloverTitle .rolloverH h4 {
+	    font-size: 2.5vw;
+	}
+	.col3 .aboutHolder .aboutInnerHolder .rolloverTitle .rolloverH h4 {
+	    font-size: 2.5vw;
+	}
+	
+
 }
 //////////////////////////////////////
 //////////////////////////////////////
@@ -596,7 +648,7 @@ and (max-width : 736px) {
 				    text-align: center;
 				    border: 1px solid #fff;
 				    border-radius: 4px;
-				    padding: 10px 50px;
+				    padding: 10px 40px;
 				    cursor: pointer;
 				    transition: all 0.25s cubic-bezier(0.5, 0.5, 0.5, 1);
 				// }
@@ -707,19 +759,40 @@ and (max-width : 736px) {
 					background-position: center center;
 					.titleOverlay{
 						position: absolute;
-						bottom: 0;
+						top: 50%;
 						width: 100%;
-						background: rgba($brown, .85);
-						padding: 20px 30px;
-						p{
-							font-size: 5vw;
-							color: $white;
-							margin: 0;
+						transform:translateY(-50%);
+						// background: rgba($brown, .85);
+						// padding: 20px 30px;
+						.rolloverH{
+							p{
+								font-size: 5vw;
+								color: $brown;
+								background: rgba($white, .85);
+								margin: 0;
+								padding: 10px 25px 10px 15px;
+								display: inline-block;
+							}
 						}
-						p.cta{
+						.rolloverP{
 							display: none;
-							font-size: 4.5vw;
-							color: rgba($white, .75);
+							p{
+								font-size: 3vw;
+								color: $white;
+								background: rgba($brown, .85);
+								margin: 0;
+								padding: 10px 25px 10px 15px;
+								display: inline-block;
+							}
+						}
+						.cta{
+							font-size: 4vw;
+							background: rgba($brown, 1);
+							color: $white;
+							padding: 10px 15px;
+							margin: 0;
+							padding: 10px 25px 10px 15px;
+							display: inline-block;
 						}
 					}
 				}
@@ -855,8 +928,8 @@ and (max-width : 736px) {
 			height: 15vh;
 			top: 0;
 			.tabOne{
-				padding: 20px;
-				padding-left: 25px;
+				padding: 15px 0 20px 25px;
+			    
 				float: left;
 				width: 50%;
 				height: 100%;
@@ -873,8 +946,7 @@ and (max-width : 736px) {
 			}
 			.tabTwo{
 				// display: none;
-				padding: 20px;;
-				padding-left: 25px;
+				padding: 15px 0  20px 25px;
 				float: left;
 				width: 50%;
 				height: 100%;
@@ -1302,22 +1374,7 @@ and (max-width : 500px) {
 					//
 					background-size: cover;
 					background-position: center center;
-					.titleOverlay{
-						position: absolute;
-						bottom: 0;
-						width: 100%;
-						background: rgba($brown, .85);
-						padding: 60px 30px 90px;
-						p{
-							font-size: 6.5vw;
-							color: $white;
-							margin: 0;
-						}
-						p.cta{
-							font-size: 4.5vw;
-							color: rgba($white, .75);
-						}
-					}
+					
 				}
 			}
 		}
@@ -1459,12 +1516,21 @@ and (max-width : 500px) {
 				opacity: .85;
 				color: $white;
 				background: rgba($brown, 0.8);
-				.title{
-					font-size: 3.5vw;
-					font-weight: 400;
-				}
-				p{
-					margin: 0;
+				position: relative;
+				.wrap{
+					position: absolute;
+					top:50%;
+					left:50%;
+					transform: translate(-50%, -50%);
+					width: 70%;
+					.title{
+						font-size: 3.5vw;
+						font-weight: 400;
+					}
+					p{
+						margin: 0;
+					}
+					
 				}
 			}
 			.tabTwo{
@@ -1477,12 +1543,20 @@ and (max-width : 500px) {
 				opacity: .85;
 				color: $white;
 				background: rgba($brown, 0.8);
-				.title{
-					font-size: 3.5vw;
-					font-weight: 400;
-				}
-				p{
-					margin: 0;
+				position: relative;
+				.wrap{
+					position: absolute;
+					top:50%;
+					left:50%;
+					transform: translate(-50%, -50%);
+					width: 70%;
+					.title{
+						font-size: 3.5vw;
+						font-weight: 400;
+					}
+					p{
+						margin: 0;
+					}
 				}
 
 			}
@@ -1659,8 +1733,11 @@ and (max-width : 500px) {
 	////////
 	////////
 	.homeGallery .full_width_image {
-	    height: 25vh;
+	    height: 45vh;
 	    margin-bottom: 0;
+	    .innerKey{
+	    	transform: scale(1.4);
+	    }
 	}
 	.homeGallery .showcaseTitle {
 	    margin: 25px 10% 40px;
@@ -1915,112 +1992,145 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 	.contact .locations {
 		margin-top: 5vh;
 	}
-	.rollover {
-	    opacity: 1;
-        top: auto;
-        bottom: 0;
-        height: 10vh;
-	}
-	.col1 .showcase01 .rolloverTitle, .col2 .showcase02 .rolloverTitle, .col3 .showcase03 .rolloverTitle, .col2 .processHolder .rolloverTitle, .col3 .aboutHolder .aboutInnerHolder .rolloverTitle {
-		opacity: 1;
-	}
-	.col1 .showcase01 .rolloverTitle .rolloverIcon  {
-	    display: none;
-	}
-	.col2 .showcase02 .rolloverTitle .rolloverIcon  {
-	    display: none;
-	}
-	.col3 .showcase03 .rolloverTitle .rolloverIcon  {
-	    display: none;
-	}
+	// .rollover {
+	//     opacity: 1;
+ //        top: auto;
+ //        bottom: 0;
+ //        height: 10vh;
+	// }
+	// .col1 .showcase01 .rolloverTitle, .col2 .showcase02 .rolloverTitle, .col3 .showcase03 .rolloverTitle, .col2 .processHolder .rolloverTitle, .col3 .aboutHolder .aboutInnerHolder .rolloverTitle {
+	// 	opacity: 1;
+	// }
+	// .col1 .showcase01 .rolloverTitle .rolloverIcon  {
+	//     display: none;
+	// }
+	// .col2 .showcase02 .rolloverTitle .rolloverIcon  {
+	//     display: none;
+	// }
+	// .col3 .showcase03 .rolloverTitle .rolloverIcon  {
+	//     display: none;
+	// }
 
-	.rollover {
-		display: block;
-	    opacity: 0;
-        top: auto;
-        bottom: 0;
-        height: 7vw;
-        	transition: opacity 1.5s $douce;
-        .rolloverTitle{
-        	display: block;
-        }
-        .rolloverP{
-        	margin: 0;
-        	padding: 0;
-        }
-	}
+	// .rollover {
+	// 	display: block;
+	//     opacity: 0;
+ //        top: auto;
+ //        bottom: 0;
+ //        height: 7vw;
+ //        	transition: opacity 1.5s $douce;
+ //        .rolloverTitle{
+ //        	display: block;
+ //        }
+ //        .rolloverP{
+ //        	margin: 0;
+ //        	padding: 0;
+ //        }
+	// }
 }
-/////////////////////////
-/////////////////////////
-/////////////////////////
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 1)  { 
-
-			.rollover {
-				display: block;
-			    opacity: 0;
-		        top: auto;
-		        bottom: 0;
-		        height: 7vw;
-		        	transition: opacity 1.5s $douce;
-		        .rolloverTitle{
-		        	display: block;
-		        }
-		        .rolloverP{
-		        	margin: 0!important;
-		        	padding: 0!important;
-		        }
-
-			}
-			.col1 .showcase01 .rolloverTitle, .col2 .showcase02 .rolloverTitle, .col3 .showcase03 .rolloverTitle, .col2 .processHolder .rolloverTitle, .col3 .aboutHolder .aboutInnerHolder .rolloverTitle {
-				opacity: 1;
-			}
-			.col1 .showcase01 .rolloverTitle .rolloverIcon  {
-			    display: none;
-			}
-			.col2 .showcase02 .rolloverTitle .rolloverIcon  {
-			    display: none;
-			}
-			.col3 .showcase03 .rolloverTitle .rolloverIcon  {
-			    display: none;
-			}
-			//
-			.col1 .showcase01 .rolloverTitle .rolloverP {
-			    font-size: 2.25vw;
-			}
-			.col2 .showcase02 .rolloverTitle .rolloverP {
-			    font-size: 2.25vw;
-			}
-			.col2 .processHolder .rolloverTitle .rolloverP {
-			    font-size: 2.25vw;
-			}
-			.col3 .showcase03 .rolloverTitle .rolloverP {
-			    font-size: 2.25vw;
-			}
-			.col3 .aboutHolder .aboutInnerHolder .rolloverTitle .rolloverP {
-			    font-size: 2.25vw;
-			}
-
-			.col3 .aboutHolder {
-				width: 45%;
-			}
-			.col3 .showcase03 {
-			    width: 55%;
-			}
-}
-
-@media only screen 
-  and (max-device-width: 320px)  {
-
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
 
 	ul.menu li a{
 		color: $white!important;
-		font-size: 6vw;
-		line-height: 1.8;
+		font-size: 4vw;
+		line-height: 1.65;
 	}
+	.about .full_width_image {
+	    height: 85vh;
+	}
+	.about .image_with_copy_overtop {
+	    height: 80vh!important;
+	}
+
+	.nav-container-mobile .nav-container-mobile-bottom .consult p {
+	    padding: 14px 30px;
+	}
+
+	.mobileHome .slides li .mobileShowcaseHolder .titleOverlay .cta {
+	    font-size: 3vw;
+	}
+
+}
+/////////////////////////
+/////////////////////////
+/////////////////////////
+// @media only screen 
+// and (min-device-width : 768px) 
+// and (max-device-width : 1024px)
+// and (orientation : landscape)
+// and (-webkit-min-device-pixel-ratio: 1)  { 
+
+// 			// .rollover {
+// 			// 	display: block;
+// 			//     opacity: 0;
+// 		 //        top: auto;
+// 		 //        bottom: 0;
+// 		 //        height: 7vw;
+// 		 //        	transition: opacity 1.5s $douce;
+// 		 //        .rolloverTitle{
+// 		 //        	display: block;
+// 		 //        }
+// 		 //        .rolloverP{
+// 		 //        	margin: 0!important;
+// 		 //        	padding: 0!important;
+// 		 //        }
+
+// 			// }
+// 			// .col1 .showcase01 .rolloverTitle, .col2 .showcase02 .rolloverTitle, .col3 .showcase03 .rolloverTitle, .col2 .processHolder .rolloverTitle, .col3 .aboutHolder .aboutInnerHolder .rolloverTitle {
+// 			// 	opacity: 1;
+// 			// }
+// 			// .col1 .showcase01 .rolloverTitle .rolloverIcon  {
+// 			//     display: none;
+// 			// }
+// 			// .col2 .showcase02 .rolloverTitle .rolloverIcon  {
+// 			//     display: none;
+// 			// }
+// 			// .col3 .showcase03 .rolloverTitle .rolloverIcon  {
+// 			//     display: none;
+// 			// }
+// 			// //
+// 			// .col1 .showcase01 .rolloverTitle .rolloverP {
+// 			//     font-size: 2.25vw;
+// 			// }
+// 			// .col2 .showcase02 .rolloverTitle .rolloverP {
+// 			//     font-size: 2.25vw;
+// 			// }
+// 			// .col2 .processHolder .rolloverTitle .rolloverP {
+// 			//     font-size: 2.25vw;
+// 			// }
+// 			// .col3 .showcase03 .rolloverTitle .rolloverP {
+// 			//     font-size: 2.25vw;
+// 			// }
+// 			// .col3 .aboutHolder .aboutInnerHolder .rolloverTitle .rolloverP {
+// 			//     font-size: 2.25vw;
+// 			// }
+
+// 			// .col3 .aboutHolder {
+// 			// 	width: 45%;
+// 			// }
+// 			// .col3 .showcase03 {
+// 			//     width: 55%;
+// 			// }
+// }
+
+
+@media only screen 
+  and (max-device-width: 375px)  {
+	.mobileHome .slides li .mobileShowcaseHolder .titleOverlay .rolloverH p {
+	    font-size: 6vw;
+	}
+	// .mobileHome .slides li .mobileShowcaseHolder .titleOverlay .cta{
+	// 	font-size: 3vw;
+	// }
+
+	// ul.menu li a{
+	// 	color: $white!important;
+	// 	font-size: 6vw;
+	// 	line-height: 1.8;
+	// }
 	// 
 	.nav-container-mobile{
 
@@ -2045,5 +2155,19 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 		.nav-container-mobile .nav-container-mobile-bottom .consult {
 		    padding-bottom: 0;
 		}
+
+		.about .image_with_copy_overtop {
+		    height: 65vh;
+		}
+		.about .full_width_image {
+		    height: 50vh;
+		}
+		
+}
+@media only screen 
+  and (max-device-width: 320px)  {
+	.mobileHome .slides li .mobileShowcaseHolder .titleOverlay .rolloverH p {
+	    font-size: 7vw;
+	}
 
 }

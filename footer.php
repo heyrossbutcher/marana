@@ -68,6 +68,7 @@ $title = get_the_title();
                   echo '<img src="'.$fs_room_thumbnail.'"/>';
                   echo '</li>';
               }
+              // echo '<div class="hold-up"><div class="spinner"><svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="100"/></svg></div></div>';
               echo '</ul>';
             }
           //
